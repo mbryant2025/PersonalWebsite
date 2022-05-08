@@ -1,3 +1,6 @@
 import shutil
+import time
 
-shutil.copy2("/run/dump1090-fa/aircraft.json", "/var/www/html/PiWebsite/aircraft")
+while True:
+    shutil.copy2("/run/dump1090-fa/aircraft.json", "/var/www/html/PiWebsite/aircraft")
+    time.sleep(5)
