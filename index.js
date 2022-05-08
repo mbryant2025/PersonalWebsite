@@ -1,5 +1,4 @@
 
-
 window.onload=function(){
     var myBtn = document.getElementById("myBtn")
     myBtn.addEventListener("click", showRick);
