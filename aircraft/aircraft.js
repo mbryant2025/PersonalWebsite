@@ -17,6 +17,15 @@ function showData() {
         document.getElementById("data").innerHTML = JSON.stringify(data);
         console.log(JSON.stringify(data));
     });
+
+    //python here
+    $.ajax({
+        type: "POST",
+        url: "map.py",
+        data: { param: text}
+      }).done(function( o ) {
+         // do something
+      });
 }
 
 
