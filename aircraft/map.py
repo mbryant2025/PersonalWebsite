@@ -2,10 +2,11 @@ import pydeck as pdk
 import pandas as pd
 import numpy as np
 import json
+import os
 
 
 
-f = open('aircraft/aircraft.json')
+f = open('aircraft.json')
 data = json.load(f)
 f.close()
 
@@ -22,8 +23,10 @@ for p in a:
 
 df = pd.DataFrame(pts, columns=['name', 'pos'])
 
+print(df)
+
 # Define a layer to display on a map
-layer = pdk.Layer(
+points = pdk.Layer(
     "ScatterplotLayer",
     df,
     pickable=True,
@@ -40,9 +43,11 @@ layer = pdk.Layer(
     get_line_color=[0, 0, 0],
 )
 
+
+
 # Set the viewport location
 view_state = pdk.ViewState(latitude=41.62167472370139, longitude=-72.74676075892226, zoom=7, bearing=0, pitch=0)
 
 # Render
-r = pdk.Deck(layers=[layer], initial_view_state=view_state, tooltip={"text": "{name}\n{address}"})
+r = pdk.Deck(layers=[points], initial_view_state=view_state, tooltip={"text": "{name}\n{address}"})
 r.to_html("aircraft/map.html")
