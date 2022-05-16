@@ -1,0 +1,3 @@
+Flight info (speed, altitude, maybe flight number)
+Chart for all data
+Map for record speeds, altitudes, distances
