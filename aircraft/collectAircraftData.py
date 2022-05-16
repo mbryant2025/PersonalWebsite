@@ -9,7 +9,7 @@ while True:
     shutil.copy2("/run/dump1090-fa/aircraft.json", "/var/www/html/PiWebsite/aircraft")
     time.sleep(5)
 
-    f = open('aircraft/aircraft.json')
+    f = open('/var/www/html/PiWebsite/aircraft/aircraft.json')
     data = json.load(f)
     f.close()
 
