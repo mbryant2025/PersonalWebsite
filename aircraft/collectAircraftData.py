@@ -22,9 +22,9 @@ while True:
     for p in a:
         if 'lat' and 'lon' not in p.keys():
             continue
-        flight = p['flight'] if 'flight' in p.keys() else 'flight number unavailable'
-        speed = str(p['gs']) + 'mph' if 'gs' in p.keys() else 'speed unavailable'
-        alt = str(p['alt_geom']) + '\'' if 'alt_geom' in p.keys() else 'altitude unavailable'
+        flight = p['flight'] if 'flight' in p.keys() else 'Flight Number Unavailable'
+        speed = str(p['gs']) + 'mph' if 'gs' in p.keys() else 'Speed Unavailable'
+        alt = str(p['alt_geom']) + '\'' if 'alt_geom' in p.keys() else 'Altitude Unavailable'
         pts.append([p['hex'], (p['lon'], p['lat']), flight, speed, alt])
 
     pts_df = pd.DataFrame(pts, columns=['id', 'pos', 'flight', 'speed', 'alt'])
@@ -105,5 +105,5 @@ while True:
     view_state = pdk.ViewState(latitude=41.62167472370139, longitude=-72.74676075892226, zoom=7, bearing=0, pitch=0)
 
     # Render
-    r = pdk.Deck(layers=layers, initial_view_state=view_state, tooltip={"text": "{flight}\n{speed}\n{alt}\n{pos}"})
+    r = pdk.Deck(layers=layers, initial_view_state=view_state, tooltip={"text": "{flight}\n{speed}\n{alt}\n({pos})"})
     r.to_html("/var/www/html/PiWebsite/aircraft/map.html")
