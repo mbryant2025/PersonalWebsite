@@ -2,9 +2,7 @@ import shutil
 import time
 import pydeck as pdk
 import pandas as pd
-import numpy as np
 import json
-
 
 
 while True:
@@ -24,9 +22,10 @@ while True:
     for p in a:
         if 'lat' and 'lon' not in p.keys():
             continue
-        pts.append([p['hex'], (p['lon'], p['lat'])])
-
-
+        flight = p['flight'] if 'flight' in p.keys() else 'flight number unavailable'
+        speed = p['gs'] + 'mph' if 'gs' in p.keys() else 'speed unavailable'
+        alt = p['alt_geom'] + '\'' if 'alt_geom' in p.keys() else 'altitude unavailable'
+        pts.append([p['hex'], (p['lon'], p['lat']), flight, speed, alt])
 
     df = pd.DataFrame(pts, columns=['name', 'pos'])
 
@@ -106,5 +105,5 @@ while True:
     view_state = pdk.ViewState(latitude=41.62167472370139, longitude=-72.74676075892226, zoom=7, bearing=0, pitch=0)
 
     # Render
-    r = pdk.Deck(layers=layers, initial_view_state=view_state, tooltip={"text": "{name}\n{address}"})
+    r = pdk.Deck(layers=layers, initial_view_state=view_state, tooltip={"text": "{flight}\n{speed}\n{alt}\n{pos}"})
     r.to_html("/var/www/html/PiWebsite/aircraft/map.html")
