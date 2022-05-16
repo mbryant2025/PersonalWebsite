@@ -5,7 +5,7 @@ import json
 
 
 
-f = open('aircraft.json')
+f = open('aircraft/aircraft.json')
 data = json.load(f)
 f.close()
 
@@ -45,4 +45,4 @@ view_state = pdk.ViewState(latitude=41.62167472370139, longitude=-72.74676075892
 
 # Render
 r = pdk.Deck(layers=[layer], initial_view_state=view_state, tooltip={"text": "{name}\n{address}"})
-r.to_html("scatterplot_layer.html")
+r.to_html("aircraft/map.html")
