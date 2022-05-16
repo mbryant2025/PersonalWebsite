@@ -23,16 +23,16 @@ while True:
         if 'lat' and 'lon' not in p.keys():
             continue
         flight = p['flight'] if 'flight' in p.keys() else 'flight number unavailable'
-        speed = p['gs'] + 'mph' if 'gs' in p.keys() else 'speed unavailable'
-        alt = p['alt_geom'] + '\'' if 'alt_geom' in p.keys() else 'altitude unavailable'
+        speed = str(p['gs']) + 'mph' if 'gs' in p.keys() else 'speed unavailable'
+        alt = str(p['alt_geom']) + '\'' if 'alt_geom' in p.keys() else 'altitude unavailable'
         pts.append([p['hex'], (p['lon'], p['lat']), flight, speed, alt])
 
-    df = pd.DataFrame(pts, columns=['name', 'pos'])
+    pts_df = pd.DataFrame(pts, columns=['id', 'pos', 'flight', 'speed', 'alt'])
 
     # Define a layer to display on a map
     points = pdk.Layer(
         "ScatterplotLayer",
-        df,
+        pts_df,
         pickable=True,
         opacity=0.1,
         stroked=True,
