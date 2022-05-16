@@ -107,4 +107,4 @@ while True:
 
     # Render
     r = pdk.Deck(layers=layers, initial_view_state=view_state, tooltip={"text": "{name}\n{address}"})
-    r.to_html("map.html")
+    r.to_html("/var/www/html/PiWebsite/aircraft/map.html")
