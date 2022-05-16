@@ -77,7 +77,7 @@ while True:
         data[path].append(loc[0])
 
     #Save JSON
-    with open("aircraft/paths.json", "w") as outfile:
+    with open("/var/www/html/PiWebsite/aircraft/paths.json", "w") as outfile:
         json.dump(data, outfile)
 
     #Make path objects
