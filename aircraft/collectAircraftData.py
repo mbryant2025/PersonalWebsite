@@ -43,7 +43,7 @@ while True:
         line_width_min_pixels=0,
         get_position="pos",
         get_radius=60,
-        get_fill_color=[255, 140, 0],
+        get_fill_color=[255, 165, 0],
         get_line_color=[0, 0, 0],
     )
 
@@ -79,8 +79,17 @@ while True:
     with open("/var/www/html/PiWebsite/aircraft/paths.json", "w") as outfile:
         json.dump(data, outfile)
 
+    def altitudeColor(path):
+        plane_data = [x for x in a if x['hex'] == path][0]
+        alt = plane_data['alt_geom'] if 'alt_geom' in plane_data else 0
+
+        # <10000' is white, >40000' is dark blue
+        rg = 0 if alt < 10_000 else 255 if alt > 40_000 else alt / 40_000 * 255
+
+        return [rg, rg, 255]
+
     #Make path objects
-    for path in data:
+    for path in data: 
 
         p = {'pos':[data[path]]}    
 
@@ -91,7 +100,7 @@ while True:
             df,
             get_path="pos",
             get_timestamps=100,
-            get_color=[153, 50, 204],
+            get_color=altitudeColor(path),
             opacity=1,
             width_min_pixels=5,
             rounded=True,
