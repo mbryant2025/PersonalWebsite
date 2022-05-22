@@ -47,8 +47,6 @@ while True:
         get_line_color=[0, 0, 0],
     )
 
-    layers.append(points)
-
     tracked_aircraft_ids = [x[0] for x in pts]
 
     f = open('/var/www/html/PiWebsite/aircraft/paths.json')
@@ -84,7 +82,7 @@ while True:
         alt = plane_data['alt_geom'] if 'alt_geom' in plane_data else 0
 
         # <10000' is white, >40000' is dark blue
-        rg = 255 if alt < 10_000 else 0 if alt > 40_000 else 1 - (alt / 40_000) * 255
+        rg = int(255 if alt < 10_000 else 0 if alt > 40_000 else 1 - (alt / 40_000) * 255)
 
         return [rg, rg, 255]
 
@@ -109,6 +107,8 @@ while True:
         )
 
         layers.append(layer)
+
+    layers.append(points)
 
     # Set the viewport location
     view_state = pdk.ViewState(latitude=41.62167472370139, longitude=-72.74676075892226, zoom=7, bearing=0, pitch=0)
