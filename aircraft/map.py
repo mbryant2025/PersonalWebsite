@@ -77,7 +77,7 @@ def altitudeColor(path):
     alt = plane_data['alt_geom'] if 'alt_geom' in plane_data else 0
 
     # <10000' is white, >40000' is dark blue
-    rg = int(0 if alt < 10_000 else 255 if alt > 40_000 else 255 - alt / 40_000 * 255)
+    rg = int(255 if alt < 10_000 else 0 if alt > 40_000 else 255 - alt / 40_000 * 255)
 
     return [rg, rg, 255]
 
