@@ -83,6 +83,7 @@ while True:
 
         # <10000' is white, >40000' is dark blue
         rg = int(255 if alt < 10_000 else 0 if alt > 40_000 else 1 - (alt / 40_000) * 255)
+        print(rg)
 
         return [rg, rg, 255]
 
