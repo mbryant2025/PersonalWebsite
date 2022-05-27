@@ -59,7 +59,7 @@ function updateMap() {
         container.removeChild(container.getElementsByTagName('iframe')[0]);
     }, 4500);
 
-    setTimeout(updateMap, 500);
+    setTimeout(updateMap, 2000);
 }
 
 
