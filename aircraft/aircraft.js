@@ -57,9 +57,9 @@ function updateMap() {
     setTimeout(function(){  
         iframe2.style.visibility = 'visible'; 
         container.removeChild(container.getElementsByTagName('iframe')[0]);
-    }, 10000);
+    }, 4500);
 
-    setTimeout(updateMap, 10000);
+    setTimeout(updateMap, 500);
 }
 
 
