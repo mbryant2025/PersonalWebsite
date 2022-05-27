@@ -47,7 +47,7 @@ function updateMap() {
 
     iframe2.src = 'map.html';
     iframe2.width = '100%';
-    iframe2.height = 450;
+    iframe2.height = 650;
     iframe2.id = 'map';
     iframe2.style = "border:0"
 
