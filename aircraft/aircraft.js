@@ -26,10 +26,40 @@ function showData() {
       }).done(function( o ) {
          // do something
       });
+
 }
 
 
 window.onload=function(){
     var myBtn = document.getElementById("update")
     myBtn.addEventListener("click", showData);
+    var myBtn = document.getElementById("updatemap")
+    myBtn.addEventListener("click", updateMap);
+
+    updateMap();
 }
+
+function updateMap() {
+    var container = document.getElementById('iframe-container');
+
+    var iframe2 = document.createElement('iframe');
+
+    iframe2.src = 'map.html';
+    iframe2.width = '100%';
+    iframe2.height = '450';
+    iframe2.id = 'map';
+    iframe2.style="border:0"
+
+    iframe2.style.visibility = 'hidden';
+    container.appendChild(iframe2);
+
+    setTimeout(function(){  
+        iframe2.style.visibility = 'visible'; 
+        container.removeChild(container.getElementsByTagName('iframe')[0]);
+    }, 1500);
+
+    setTimeout(updateMap, 3500);
+}
+
+
+
