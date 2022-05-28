@@ -24,7 +24,6 @@ function showData() {
         url: "map.py",
         data: { param: text}
       }).done(function( o ) {
-         // do something
       });
 
 }
@@ -36,10 +35,23 @@ window.onload=function(){
     var myBtn = document.getElementById("updatemap")
     myBtn.addEventListener("click", updateMap);
 
-    updateMap();
+    setTimeout(updateMap(), 5000);
 }
 
 function updateMap() {
+    let found = false;
+    Array.from(document.querySelectorAll(":hover")).forEach(function(el) {
+        if (el.id == "map") {
+            found = true;
+        }
+    });
+
+    if (found) {
+        setTimeout(function(){
+            updateMap();
+        }, 500);
+        return;
+    }
 
     var container = document.getElementById('iframe-container');
 
@@ -52,15 +64,26 @@ function updateMap() {
     iframe2.style = "border:0"
 
     iframe2.style.visibility = 'hidden';
+
     container.appendChild(iframe2);
 
     setTimeout(function(){  
+
+        Array.from(document.querySelectorAll(":hover")).forEach(function(el) {
+            if (el.id == "map") {
+                found = true;
+            }
+        });
+        if (found) {
+            container.removeChild(iframe2);
+            return;
+        }
+
         iframe2.style.visibility = 'visible'; 
+        
         container.removeChild(container.getElementsByTagName('iframe')[0]);
     }, 4500);
 
-    setTimeout(updateMap, 2000);
+
+    setTimeout(updateMap, 5000);
 }
-
-
-
