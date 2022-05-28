@@ -1,3 +1,5 @@
+let toggle = true;
+
 function readTextFile(file, callback) {
     var rawFile = new XMLHttpRequest();
     rawFile.overrideMimeType("application/json");
@@ -31,7 +33,33 @@ function showData() {
 
 window.onload=function(){
 
+    checkSwitch();
+
     setTimeout(updateMap(), 5000);
+}
+
+function checkSwitch() {
+    let found = false;
+    Array.from(document.querySelectorAll(":hover")).forEach(function(el) {
+        if (el.id == "map") {
+            found = true;
+        }
+    });
+
+    if (!found && toggle) {
+        document.getElementById("switch").checked = true;
+        toggle = false;
+    }
+
+    if (found) {
+        document.getElementById("switch").checked = false;
+        toggle = true;
+    }
+
+
+
+    setTimeout(checkSwitch, 500);
+
 }
 
 function updateMap() {
@@ -73,7 +101,8 @@ function updateMap() {
                 found = true;
             }
         });
-        if (found) {
+        
+        if (found || !document.getElementById("switch").checked) {
             container.removeChild(iframe2);
             return;
         }
@@ -85,4 +114,5 @@ function updateMap() {
 
 
     setTimeout(updateMap, 5000);
+
 }
