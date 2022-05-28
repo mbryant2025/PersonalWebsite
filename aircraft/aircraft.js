@@ -30,10 +30,6 @@ function showData() {
 
 
 window.onload=function(){
-    var myBtn = document.getElementById("update")
-    myBtn.addEventListener("click", showData);
-    var myBtn = document.getElementById("updatemap")
-    myBtn.addEventListener("click", updateMap);
 
     setTimeout(updateMap(), 5000);
 }
