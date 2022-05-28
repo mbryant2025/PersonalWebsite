@@ -35,6 +35,7 @@ window.onload=function(){
 }
 
 function updateMap() {
+
     let found = false;
     Array.from(document.querySelectorAll(":hover")).forEach(function(el) {
         if (el.id == "map") {
@@ -55,9 +56,11 @@ function updateMap() {
 
     iframe2.src = 'map.html';
     iframe2.width = '100%';
-    iframe2.height = 650;
     iframe2.id = 'map';
-    iframe2.style = "border:0"
+    iframe2.frameBorder = 0;
+    iframe2.height = 650;
+    iframe2.style = "position:absolute; top:50px;";
+
 
     iframe2.style.visibility = 'hidden';
 
@@ -76,7 +79,7 @@ function updateMap() {
         }
 
         iframe2.style.visibility = 'visible'; 
-        
+
         container.removeChild(container.getElementsByTagName('iframe')[0]);
     }, 4500);
 
