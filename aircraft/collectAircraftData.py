@@ -28,8 +28,6 @@ while True:
     time.sleep(5)
 
     #Calculate if any records have been achieved
-    with open('/var/www/html/PiWebsite/aircraft/showRecords.txt') as f:
-        show_records = f.read()
         
     now = datetime.now()
     t = now.strftime("%m/%d/%Y %H:%M:%S")
