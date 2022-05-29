@@ -56,8 +56,6 @@ function checkSwitch() {
         toggle = true;
     }
 
-
-
     setTimeout(checkSwitch, 500);
 
 }
@@ -82,11 +80,11 @@ function updateMap() {
 
     var iframe2 = document.createElement('iframe');
 
-    iframe2.src = 'map.html';
-    iframe2.width = '100%';
-    iframe2.id = 'map';
+    iframe2.src = "map.html";
+    iframe2.width = "100%";
+    iframe2.id = "map";
     iframe2.frameBorder = 0;
-    iframe2.height = 650;
+    iframe2.height = "70%";
     iframe2.style = "position:absolute; top:50px;";
 
 
