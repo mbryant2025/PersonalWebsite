@@ -1,11 +1,9 @@
-import fs from 'fs'
-
 let toggle = true;
 
 window.onload=function(){
 
     var recordBtn = document.getElementById("record");
-    recordBtn.addEventListener("click", showRecords);
+    // recordBtn.addEventListener("click", showRecords);
 
     checkSwitch();
     setTimeout(updateMap(), 5000);
@@ -98,10 +96,4 @@ function updateMap() {
 
     setTimeout(updateMap, 5000);
 
-}
-
-function showRecords() {
-    fs.writeFile('showRecords.txt', "0", (err) => {
-        if (err) throw err;
-    })
 }
