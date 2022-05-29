@@ -20,6 +20,10 @@ def in_path(hex):
         paths = json.load(f)
         return hex in paths.keys()
 
+with open('aircraft/showRecords.txt') as f:
+    show_records = f.read()
+    
+
 now = datetime.now()
 t = now.strftime("%m/%d/%Y %H:%M:%S")
 
