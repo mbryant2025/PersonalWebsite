@@ -171,8 +171,6 @@ while True:
         #Remap labels here for record planes --> variable names look unintiutiive here for this reason
         r_pts_df = pd.DataFrame(r_pts, columns=['id', 'pos', 'flight', 'speed', 'alt'])
 
-        print(r_pts_df)
-
         # Define a layer to display on a map
         r_points = pdk.Layer(
             "ScatterplotLayer",
@@ -197,8 +195,6 @@ while True:
             r_p_pos = {'pos': [records[r_p][4]]}    
 
             r_p_df = pd.DataFrame(r_p_pos, columns=['pos'])
-
-            print(r_p_df)
 
             layer = pdk.Layer(
                 "TripsLayer",
