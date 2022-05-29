@@ -159,7 +159,6 @@ while True:
             
             pos = records[r_p][4][-1] if type(records[r_p][4][-1]) == list else records[r_p][4]
             pos = (pos[0], pos[1])
-            print(pos)
 
             record_name = str(record_labels[r_p]) + " - " + (str(records[r_p][2]) if records[r_p][2] is not None else "Flight Number Unavailable")
             r_pts.append([r_p, pos, record_name])
