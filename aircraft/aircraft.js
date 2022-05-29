@@ -1,4 +1,15 @@
+import fs from 'fs'
+
 let toggle = true;
+
+window.onload=function(){
+
+    var recordBtn = document.getElementById("record");
+    recordBtn.addEventListener("click", showRecords);
+
+    checkSwitch();
+    setTimeout(updateMap(), 5000);
+}
 
 function readTextFile(file, callback) {
     var rawFile = new XMLHttpRequest();
@@ -10,32 +21,6 @@ function readTextFile(file, callback) {
         }
     }
     rawFile.send(null);
-}
-
-
-function showData() {
-    readTextFile("aircraft.json", function(text){
-        var data = JSON.parse(text);
-        document.getElementById("data").innerHTML = JSON.stringify(data);
-        console.log(JSON.stringify(data));
-    });
-
-    //python here
-    $.ajax({
-        type: "POST",
-        url: "map.py",
-        data: { param: text}
-      }).done(function( o ) {
-      });
-
-}
-
-
-window.onload=function(){
-
-    checkSwitch();
-
-    setTimeout(updateMap(), 5000);
 }
 
 function checkSwitch() {
@@ -113,4 +98,10 @@ function updateMap() {
 
     setTimeout(updateMap, 5000);
 
+}
+
+function showRecords() {
+    fs.writeFile('showRecords.txt', "0", (err) => {
+        if (err) throw err;
+    })
 }
