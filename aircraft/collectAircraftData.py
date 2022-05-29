@@ -154,7 +154,7 @@ while True:
 
         for r_p in records.keys():
 
-            if records[r_p][4] is None:
+            if len(records[r_p][4]) == 0:
                 continue
             
             pos = records[r_p][4][-1] if type(records[r_p][4][-1]) == list else records[r_p][4]
