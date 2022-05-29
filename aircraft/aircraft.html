@@ -8,6 +8,7 @@
         <style>
             body {
                 background-color: #212121;
+                padding-bottom: 120%;
             }
         </style>
     </head>
@@ -32,15 +33,30 @@
 
         <p class="paragraph" style="top:75.5%;left:75px;">Auto-Update</p>
         
-        <button id="liveButton" class="activatedButton" style="top:80%;left:33%;">Live Aircraft</button>
-        <button id="recordButton" class="neutralButton" style="top:80%;right:33%;">Record Book</button>
+        <button id="liveButton" class="activatedButton" style="top:85%;left:33%;">Live Aircraft</button>
+        <button id="recordButton" class="neutralButton" style="top:85%;right:33%;">Record Book</button>
 
-        <div class="square" style="top:76.5%;right:75px;"></div>
-
+        <div class="square" style="top:76.5%;right:75px;background-image: linear-gradient(to right, white, blue);"></div>
+        <div class="square" style="top:81.5%;right:75px;background-color:#32a852;"></div>
+        
         <p class="paragraph" style="top:76%;right:280px;">10k'</p>
         <p class="paragraph" style="top:76%;right:20px;">40k'</p>
 
-        <p style="position:absolute; top:76%;right:50%;">Hi</p>
+        <p class="paragraph" style="top:80.7%;right:280px;">Records</p>
+
+        <table id="table" style="position:absolute;top:94%;left:15%;width:70%;">
+            <tr>
+              <th>#</th>
+              <th>Flight Number</th>
+              <th>Speed</th>
+              <th>Altitude</th>
+              <th>Available on Map</th>
+            </tr>
+            
+        </table>
+
+
+        
 
 
 

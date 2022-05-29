@@ -136,8 +136,25 @@
   }
 
   .square {
-    height: 50px;
+    height: 5%;
     width: 200px;
-    background-image: linear-gradient(to right, white, blue);
     position: absolute;
   }
+
+  #table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #32a852;
+    color: white;
+    font-family:'Courier New', monospace;
+  }
+
+  #table td, #table th {
+  
+    padding: 8px;
+    color: white;
+    font-family:'Courier New', monospace;
+  }
+
+  #table tr:hover {background-color: #2e2d2d;}

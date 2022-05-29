@@ -1,4 +1,1 @@
-Flight info (speed, altitude, maybe flight number)
-Chart for all data
-Map for record speeds (low and high), altitudes (low and high), distances (low and high)
-Persist zoom over update of map
+record for most concurrent planes
