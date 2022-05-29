@@ -20,7 +20,7 @@ while True:
     pts = []
 
     for p in a:
-        if 'lat' and 'lon' not in p.keys():
+        if 'lat' not in p.keys() or 'lon' not in p.keys():
             continue
         flight = p['flight'] if 'flight' in p.keys() else 'Flight Number Unavailable'
         speed = str(p['gs']) + 'mph' if 'gs' in p.keys() else 'Speed Unavailable'

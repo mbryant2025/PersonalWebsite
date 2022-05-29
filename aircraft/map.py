@@ -1,3 +1,5 @@
+#local file for testing purposes only. Used as local equivalent to collectAircraftData.py
+
 import pydeck as pdk
 import pandas as pd
 import json
@@ -13,7 +15,7 @@ a = data['aircraft']
 pts = []
 
 for p in a:
-    if 'lat' and 'lon' not in p.keys():
+    if 'lat' not in p.keys() or 'lon' not in p.keys():
         continue
     flight = p['flight'] if 'flight' in p.keys() else 'flight number unavailable'
     speed = str(p['gs']) + 'mph' if 'gs' in p.keys() else 'speed unavailable'
