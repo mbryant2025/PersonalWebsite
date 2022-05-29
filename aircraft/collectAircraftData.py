@@ -68,32 +68,32 @@ while True:
         if speed is not None:
             if speed > max_speed:
                 max_speed = speed
-                records['max_speed'] = [speed, hex, flight, t, get_path(hex)] if in_path(hex) else [speed, hex, flight, t, [lat, lon]] if lat is not None and lon is not None else [speed, hex, flight, t, []] 
+                records['max_speed'] = [speed, hex, flight, t, get_path(hex)] if in_path(hex) else [speed, hex, flight, t, [lon, lat]] if lat is not None and lon is not None else [speed, hex, flight, t, []] 
 
         if speed is not None:
             if speed < min_speed:
                 min_speed = speed
-                records['min_speed'] = [speed, hex, flight, t, get_path(hex)] if in_path(hex) else [speed, hex, flight, t, [lat, lon]] if lat is not None and lon is not None else [speed, hex, flight, t, []] 
+                records['min_speed'] = [speed, hex, flight, t, get_path(hex)] if in_path(hex) else [speed, hex, flight, t, [lon, lat]] if lat is not None and lon is not None else [speed, hex, flight, t, []] 
 
         if alt is not None:
             if alt > max_alt:
                 max_alt = alt
-                records['max_alt'] = [alt, hex, flight, t, get_path(hex)] if in_path(hex) else [alt, hex, flight, t, [lat, lon]] if lat is not None and lon is not None else [alt, hex, flight, t, []] 
+                records['max_alt'] = [alt, hex, flight, t, get_path(hex)] if in_path(hex) else [alt, hex, flight, t, [lon, lat]] if lat is not None and lon is not None else [alt, hex, flight, t, []] 
 
         if alt is not None:
             if alt < min_alt:
                 min_alt = alt
-                records['min_alt'] = [alt, hex, flight, t, get_path(hex)] if in_path(hex) else [alt, hex, flight, t, [lat, lon]] if lat is not None and lon is not None else [alt, hex, flight, t, []] 
+                records['min_alt'] = [alt, hex, flight, t, get_path(hex)] if in_path(hex) else [alt, hex, flight, t, [lon, lat]] if lat is not None and lon is not None else [alt, hex, flight, t, []] 
 
         if d is not None:
             if d > max_dist:
                 max_dist = d
-                records['max_dist'] = [d, hex, flight, t, get_path(hex)] if in_path(hex) else [d, hex, flight, t, [lat, lon]] if lat is not None and lon is not None else [d, hex, flight, t, []] 
+                records['max_dist'] = [d, hex, flight, t, get_path(hex)] if in_path(hex) else [d, hex, flight, t, [lon, lat]] if lat is not None and lon is not None else [d, hex, flight, t, []] 
 
         if d is not None:
                 if d < min_dist:
                     min_dist = d
-                    records['min_dist'] = [d, hex, flight, t, get_path(hex)] if in_path(hex) else [d, hex, flight, t, [lat, lon]] if lat is not None and lon is not None else [d, hex, flight, t, []] 
+                    records['min_dist'] = [d, hex, flight, t, get_path(hex)] if in_path(hex) else [d, hex, flight, t, [lon, lat]] if lat is not None and lon is not None else [d, hex, flight, t, []] 
 
 
     with open('/var/www/html/PiWebsite/aircraft/records.json', 'w') as outfile:
