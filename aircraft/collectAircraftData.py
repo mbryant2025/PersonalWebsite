@@ -159,6 +159,7 @@ while True:
             
             pos = records[r_p][4][-1] if type(records[r_p][4][-1]) == list else records[r_p][4]
             pos = (pos[0], pos[1])
+            print(pos)
 
             record_name = str(record_labels[r_p]) + " - " + (str(records[r_p][2]) if records[r_p][2] is not None else "Flight Number Unavailable")
             r_pts.append([r_p, pos, record_name])
@@ -214,9 +215,8 @@ while True:
 
     tracked_aircraft_ids = [x[0] for x in pts]
 
-    f = open('/var/www/html/PiWebsite/aircraft/paths.json')
-    data = json.load(f)
-    f.close()
+    with open('/var/www/html/PiWebsite/aircraft/paths.json') as f:
+        data = json.load(f)
 
     remove = []
 
