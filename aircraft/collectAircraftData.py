@@ -1,3 +1,7 @@
+#This script runs in the background on the Pi and collects data from the SDR/Dump1090
+#It transfers the data to the aircraft\data.json file, manages records, and also generates the HTML map of the aircraft
+
+
 import shutil
 import time
 import pydeck as pdk
