@@ -3,6 +3,7 @@
     <head>
         <script src="aircraft.js"></script>
         <link href="aircraft.css" rel="stylesheet" type="text/css" />
+        <link href="../navbar.css" rel="stylesheet" type="text/css" />
 
         <title>Never Gonna Give You Up</title>
         <style>
@@ -16,13 +17,19 @@
 
         <div class="navbar">
             <a href="../index.html">Home</a>
-            <a href="aircraft.html">Aircraft</a>
+            <div class="dropdown">
+                <button class="dropbtn">Aircraft</button>
+                <div class="dropdown-content">
+                  <a href="aircraft.html">Flight Tracker</a>
+                  <a href="aircraftAbout.html">About</a>
+                </div>
+            </div> 
             <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Download More RAM</a>
             <a href="https://github.com/mbryant2025">GitHub</a>
             
         </div>
 
-        <div id="iframe-container" style="margin-left:-8px">
+        <div id="iframe-container" style="margin-left:-8px;">
             <iframe id="map" src="map.html" width="100%" height="70%" frameborder="0" style="position:absolute; top:50px;" allowfullscreen> </iframe>
         </div>
 

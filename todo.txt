@@ -1,1 +1,2 @@
 record for most concurrent planes
+add warning screen for when screen is too small
