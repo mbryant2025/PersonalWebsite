@@ -169,8 +169,6 @@ function loadRecordAircraft() {
             let timestamp = data[Object.keys(data)[i]][3];
             let availableOnMap = data[Object.keys(data)[i]][4].length == 0 ? "No" : "Yes";
 
-            console.log(availableOnMap);
-
             if (i == 0) {
                 record = "Max Speed";
                 metric += " mph";
