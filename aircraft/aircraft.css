@@ -3,6 +3,9 @@
     display: inline-block;
     width: 60px;
     height: 34px;
+    position:absolute;
+    top:77%;
+    left:8px;
   }
 
   .switch input { 
@@ -58,8 +61,28 @@
     color:white;
     font-family:'Courier New', monospace;
     font-size:20px;
-    text-align: left;
+    text-align:left;
     position:absolute;
+  }
+
+  .paragraph1 {
+    top:75.5%;
+    left:75px;
+  }
+
+  .paragraph2 {
+    top:76%;
+    right:280px;
+  }
+
+  .paragraph3 {
+    top:76%;
+    right:20px;
+  }
+
+  .paragraph4 {
+    top:80.7%;
+    right:280px;
   }
 
   .activatedButton {
@@ -96,6 +119,16 @@
     border-radius: 7px;
   }
 
+  .button1 {
+    top:85%;
+    left:33%;
+  }
+
+  .button2 {
+    top:85%;
+    right:33%;
+  }
+
   .neutralButton:hover {
     background-color: #32a852;
     color: white;
@@ -110,6 +143,18 @@
     height: 5%;
     width: 200px;
     position: absolute;
+  }
+
+  .gradient {
+    top:76.5%;
+    right:75px;
+    background-image: linear-gradient(to right, white, blue);
+  }
+
+  .solid {
+    top:81.5%;
+    right:75px;
+    background-color:#32a852;
   }
 
   #table th {
@@ -128,4 +173,24 @@
     font-family:'Courier New', monospace;
   }
 
-  #table tr:hover {background-color: #2e2d2d;}
+  #table tr:hover {
+    background-color: #2e2d2d;
+  }
+
+  #table {
+    position:absolute;
+    top:94%;
+    left:15%;
+    width:70%;
+  }
+
+
+  #iframe-container {
+    margin-left:-8px;
+  }
+
+  #map {
+    position:absolute;
+    top:50px;
+  }
+
