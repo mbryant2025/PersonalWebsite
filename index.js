@@ -41,35 +41,6 @@ function rotate() {
     cube.rotation.y -= 0.0025;
     cube.rotation.z -= 0.0001;
     renderer.render(scene, camera);
-
 }
 
 rotate();
-
-function animate() {
-
-    setTimeout(function() {
-        i++
-        if (i < 100) {
-            cube.rotation.x += 0.0;
-            cube.rotation.y += 0.0;
-            renderer.render(scene, camera);
-            animate();
-        }
-
-
-    }, 100);
-
-    // requestAnimationFrame(animate);
-
-}
-
-function callAnimate() {
-    if (i < 99 && i > 0) {
-        return;
-    }
-    i = 0;
-    animate();
-}
-
-document.body.onscroll = callAnimate;
