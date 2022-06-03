@@ -1,17 +1,33 @@
-body
-{
+body {
     background-color: black;
 }
 
-canvas 
-{
+canvas {
     position: fixed;
     top: 0px;
     left: 0px;
     z-index: -1;
 }
 
-main
-{
+main {
     position: absolute;
+}
+
+h1 {
+    font-family:'Courier New', Courier, monospace;
+    color: white;
+    position: relative;
+    left: 20%;
+    font-size: 60px;
+}
+
+div {
+    position: absolute;
+    left: 20%;
+    right: 50%;
+    outline: 0px;
+    outline-style: round;
+    background-color: #212121;
+    border-radius: 10px;
+      
 }
