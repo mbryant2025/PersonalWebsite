@@ -31,8 +31,10 @@ canvas {
     margin: auto;
     height: 200px;
     margin-top: 25px;
+    font-family:'Courier New', Courier, monospace;
+    color: white;
+    font-size: 30px;
 }
-
 
 h1 {
     font-family:'Courier New', Courier, monospace;
