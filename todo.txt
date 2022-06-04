@@ -1,3 +1,4 @@
 add warning screen for when screen is too small
 make mobile version
 favicon
+update navbar to include all links
