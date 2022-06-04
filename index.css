@@ -26,7 +26,7 @@ canvas {
     outline-style: round;
     background-color: #212121;
     border-radius: 14px;
-    width: 61%;
+    width: 68%;
     margin: auto;
     height: 200px;
     margin-top: 25px;
@@ -43,10 +43,10 @@ canvas {
 }
 
 .projectImage {
-    max-width:190px;
-    max-height:23.45%; /* 0.67 * 0.35 */
-    margin-top:5px;
-    margin-right:5px;
+    max-width:180px;
+    max-height:180px;
+    margin-top:10px;
+    float: right;
 }
 
 h1 {
