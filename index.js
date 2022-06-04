@@ -29,9 +29,7 @@ cube.position.x = 1.8;
 cube.position.y = 0;
 cube.position.z = -1.8;
 
-
 scene.add(cube);
-
 
 var i = 0;
 
@@ -42,6 +40,5 @@ function rotate() {
     cube.rotation.z -= 0.0001;
     renderer.render(scene, camera);
 }
-
 
 rotate();

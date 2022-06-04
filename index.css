@@ -28,7 +28,9 @@ canvas {
     border-radius: 14px;
     width: 68%;
     margin: auto;
-    height: 200px;
+    display: block;
+    overflow: auto;
+    min-height: 200px;
     margin-top: 25px;
     font-family:'Courier New', Courier, monospace;
     color: white;
@@ -40,6 +42,13 @@ canvas {
 
 .description {
     font-size: 18px;
+}
+
+.planeImage {
+    max-width:180px;
+    max-height:180px;
+    margin-top:50px;
+    float: right;
 }
 
 .projectImage {
