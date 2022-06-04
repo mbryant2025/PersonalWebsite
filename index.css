@@ -44,10 +44,31 @@ canvas {
     font-size: 18px;
 }
 
-.planeImage {
+#planeImage {
     max-width:180px;
     max-height:180px;
     margin-top:50px;
+    float: right;
+}
+
+#birdImage {
+    max-width:180px;
+    max-height:180px;
+    margin-top:35px;
+    float: right;
+}
+
+#infoImage {
+    max-width:150px;
+    max-height:150px;
+    margin-top:25px;
+    float: right;
+}
+
+#otherImage {
+    max-width:120px;
+    max-height:120px;
+    margin-top:40px;
     float: right;
 }
 
