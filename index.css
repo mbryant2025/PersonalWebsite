@@ -8,7 +8,6 @@ body {
 }
 
 .wrapper > div {
-    background: black;
     padding: 1em;
 }
 
@@ -33,7 +32,22 @@ canvas {
     margin-top: 25px;
     font-family:'Courier New', Courier, monospace;
     color: white;
+}
+
+.projectTitle {
     font-size: 30px;
+}
+
+.description {
+    font-size: 18px;
+}
+
+.projectImage {
+    max-width:100%;
+    max-height:100%;
+    margin-right:0%;
+    float: right;
+    float: top;
 }
 
 h1 {
@@ -42,4 +56,10 @@ h1 {
     position: relative;
     font-size: 60px;
     text-align: center;
+}
+
+.divColumn {
+    width: 50%;
+    padding: 5px;
+    float: left;
 }
