@@ -44,7 +44,7 @@ canvas {
 
 .projectImage {
     max-width:190px;
-    max-height:190px;
+    max-height:23.45%;
     margin-top:5px;
     margin-right:5px;
 }
@@ -64,7 +64,7 @@ h1 {
 
 .divColumnBig {
     padding: 14px;
-    width: 61%;
+    width: 55%;
     float: left;
 }
 
