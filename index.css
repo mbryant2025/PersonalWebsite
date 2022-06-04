@@ -13,15 +13,17 @@
 }
 
 #infoImage {
-    max-width:150px;
-    max-height:150px;
-    margin-top:25px;
+    max-width:130px;
+    max-height:130px;
+    margin-top:35px;
+    margin-right: 10px;
     float: right;
 }
 
 #otherImage {
-    max-width:120px;
-    max-height:120px;
-    margin-top:40px;
+    max-width:110px;
+    max-height:110px;
+    margin-top:50px;
+    margin-right: 20px;
     float: right;
 }
