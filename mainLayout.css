@@ -36,6 +36,10 @@ canvas {
     color: white;
 }
 
+.infobox:hover {
+    background-color: #2d2d2d;
+}
+
 .projectTitle {
     font-size: 30px;
 }
@@ -86,4 +90,13 @@ a:hover {
     max-height:180px;
     margin-top:10px;
     float: right;
+}
+
+.backButton {
+    color: white;
+    font-family:'Courier New', Courier, monospace;
+    position: fixed;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 70px;
 }

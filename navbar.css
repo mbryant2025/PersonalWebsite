@@ -5,63 +5,62 @@
     margin-top: -8px;
   }
     
-    .navbar a {
-      float: left;
-      display: block;
-      color: #f2f2f2;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 20px;
-      font-family: 'Courier New', monospace;
-    }
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Courier New', monospace;
+  }
+
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #32a852;
+    color: white;
+    transition-duration: 0.5s;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ccc;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+  }
   
-    .dropdown {
-      float: left;
-      overflow: hidden;
-    }
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
   
-    .dropdown .dropbtn {
-      font-size: 16px;  
-      border: none;
-      outline: none;
-      color: white;
-      padding: 14px 16px;
-      background-color: inherit;
-      font-family: 'Courier New', monospace;
-      font-size: 20px;
-      margin: 0;
-    }
+  .dropdown-content a:hover {
+    background-color: #32a852;
+  }
   
-    .navbar a:hover, .dropdown:hover .dropbtn {
-      background-color: #32a852;
-      color: white;
-      transition-duration: 0.5s;
-    }
-  
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #ccc;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 2;
-    }
-    
-    .dropdown-content a {
-      float: none;
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      text-align: left;
-    }
-    
-    .dropdown-content a:hover {
-      background-color: #32a852;
-    }
-    
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
