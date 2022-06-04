@@ -43,4 +43,5 @@ function rotate() {
     renderer.render(scene, camera);
 }
 
+
 rotate();

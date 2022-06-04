@@ -1,19 +1,19 @@
-/* body {
-    background-color: white;
-} */
+body {
+    background-color: black;
+}
 
 .wrapper {
     display: grid;
-    grid-template-columns: 61% 39%;
+    grid-template-columns: 67% 33%;
 }
 
 .wrapper > div {
-    background: aqua;
+    background: black;
     padding: 1em;
 }
 
-.wrapper > div:nth-child(odd) {
-    background: red;
+.wrapper > div:nth-child(even) {
+    z-index: -2;
 }
 
 canvas {
@@ -23,25 +23,20 @@ canvas {
     z-index: -1;
 }
 
-/* main {
-    position: absolute;
+.infobox {
+    outline-style: round;
+    background-color: #212121;
+    border-radius: 12px;
+    width: 61%;
+    margin: auto;
+    height: 200px;
 }
+
 
 h1 {
     font-family:'Courier New', Courier, monospace;
     color: white;
     position: relative;
-    left: 20%;
     font-size: 60px;
+    text-align: center;
 }
-
-div {
-    position: absolute;
-    left: 20%;
-    right: 50%;
-    outline: 0px;
-    outline-style: round;
-    background-color: #212121;
-    border-radius: 10px;
-      
-} */
