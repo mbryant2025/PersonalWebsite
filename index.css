@@ -26,10 +26,11 @@ canvas {
 .infobox {
     outline-style: round;
     background-color: #212121;
-    border-radius: 12px;
+    border-radius: 14px;
     width: 61%;
     margin: auto;
     height: 200px;
+    margin-top: 25px;
 }
 
 

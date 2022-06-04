@@ -78,7 +78,7 @@ while True:
                 records['min_speed'] = [speed, hex, flight, t, get_path(hex)] if in_path(hex) else [speed, hex, flight, t, [lon, lat]] if lat is not None and lon is not None else [speed, hex, flight, t, []] 
 
         if alt is not None:
-            if alt > max_alt:
+            if alt > max_alt and alt < 55_000: #Remove erroneous altitude data
                 max_alt = alt
                 records['max_alt'] = [alt, hex, flight, t, get_path(hex)] if in_path(hex) else [alt, hex, flight, t, [lon, lat]] if lat is not None and lon is not None else [alt, hex, flight, t, []] 
 
