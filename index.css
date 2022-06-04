@@ -44,7 +44,7 @@ canvas {
 
 .projectImage {
     max-width:190px;
-    max-height:23.45%;
+    max-height:23.45%; /* 0.67 * 0.35 */
     margin-top:5px;
     margin-right:5px;
 }
