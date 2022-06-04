@@ -7,7 +7,7 @@ camera.position.set(2,2,2);
 camera.lookAt(new THREE.Vector3(0,0,0));
 
 const renderer = new THREE.WebGLRenderer( {
-    canvas: document.querySelector('#bg')
+    canvas: document.querySelector('#cube')
 });
 
 renderer.setSize(window.devicePixelRatio);

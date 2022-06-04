@@ -1,5 +1,19 @@
-body {
-    background-color: black;
+/* body {
+    background-color: white;
+} */
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 61% 39%;
+}
+
+.wrapper > div {
+    background: aqua;
+    padding: 1em;
+}
+
+.wrapper > div:nth-child(odd) {
+    background: red;
 }
 
 canvas {
@@ -9,7 +23,7 @@ canvas {
     z-index: -1;
 }
 
-main {
+/* main {
     position: absolute;
 }
 
@@ -30,4 +44,4 @@ div {
     background-color: #212121;
     border-radius: 10px;
       
-}
+} */
