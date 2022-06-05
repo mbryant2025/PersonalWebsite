@@ -83,7 +83,7 @@ while True:
                 records['max_alt'] = [alt, hex, flight, t, get_path(hex)] if in_path(hex) else [alt, hex, flight, t, [lon, lat]] if lat is not None and lon is not None else [alt, hex, flight, t, []] 
 
         if alt is not None:
-            if alt < min_alt:
+            if alt < min_alt and alt > 0: #Remove erroneous negative altitudes
                 min_alt = alt
                 records['min_alt'] = [alt, hex, flight, t, get_path(hex)] if in_path(hex) else [alt, hex, flight, t, [lon, lat]] if lat is not None and lon is not None else [alt, hex, flight, t, []] 
 
