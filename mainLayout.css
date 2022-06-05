@@ -15,6 +15,18 @@ body {
     z-index: -2;
 }
 
+.writeupWrapper {
+    display: grid;
+}
+
+.writeupWrapper > div {
+    padding: 1em;
+}
+
+.writeupWrapper > div:nth-child(even) {
+    z-index: -2;
+}
+
 canvas {
     position: fixed;
     top: 0px;
@@ -63,6 +75,15 @@ h1 {
     text-align: center;
 }
 
+h5 {
+    font-family:'Courier New', Courier, monospace;
+    color: white;
+    position: relative;
+    margin-top: 0px;
+    font-size: 30px;
+    text-align: center;
+}
+
 .divColumnSmall {
     width: 35%;
     float: left;
@@ -72,6 +93,12 @@ h1 {
     padding: 14px;
     width: 55%;
     float: left;
+}
+
+.projectWriteup {
+    padding: 14px;
+    float: left;
+    font-size: 18px;
 }
 
 a {
