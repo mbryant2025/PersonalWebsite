@@ -73,7 +73,7 @@ while True:
                 records['max_speed'] = [speed, hex, flight, t, get_path(hex)] if in_path(hex) else [speed, hex, flight, t, [lon, lat]] if lat is not None and lon is not None else [speed, hex, flight, t, []] 
 
         if speed is not None:
-            if speed < min_speed:
+            if speed < min_speed and speed > 0: #Remove erroneous negative speeds
                 min_speed = speed
                 records['min_speed'] = [speed, hex, flight, t, get_path(hex)] if in_path(hex) else [speed, hex, flight, t, [lon, lat]] if lat is not None and lon is not None else [speed, hex, flight, t, []] 
 
