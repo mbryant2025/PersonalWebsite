@@ -1,0 +1,56 @@
+.image {
+    max-width:180px;
+    max-height:180px;
+    margin-top:40px;
+    float: right;
+}
+
+#visionGuidedRobotImage {
+    max-width:180px;
+    max-height:180px;
+    margin-top:30px;
+    float: right;
+}
+
+#noaa {
+    max-width:180px;
+    max-height:180px;
+    margin-top:15px;
+    float: right;
+}
+
+#pointillism {
+    max-width:180px;
+    max-height:180px;
+    margin-top:30px;
+    float: right;
+}
+
+#forklift {
+    max-width:180px;
+    max-height:180px;
+    margin-top:30px;
+    float: right;
+}
+
+#yagi {
+    max-width:180px;
+    max-height:180px;
+    margin-top:30px;
+    float: right;
+}
+
+#countdown {
+    max-width:180px;
+    max-height:180px;
+    margin-top:35px;
+    float: right;
+}
+
+#ballBalancing {
+    max-width:180px;
+    max-height:180px;
+    margin-top:15px;
+    margin-right: 50px;
+    float: right;
+}
