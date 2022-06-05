@@ -47,6 +47,35 @@
     float: right;
 }
 
+#flightTracker {
+    max-width:170px;
+    max-height:170px;
+    margin-top:20px;
+    float: right;
+}
+
+#ngram {
+    max-width:170px;
+    max-height:170px;
+    margin-top:15px;
+    float: right;
+}
+
+#wordler {
+    max-width:170px;
+    max-height:170px;
+    margin-top:22px;
+    float: right;
+}
+
+#birdFeeder {
+    max-width:170px;
+    max-height:170px;
+    margin-top:15px;
+    margin-right: 20px;
+    float: right;
+}
+
 #ballBalancing {
     max-width:180px;
     max-height:180px;
