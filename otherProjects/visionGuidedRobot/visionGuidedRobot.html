@@ -17,10 +17,105 @@
             <h1>Vision Guided Robot</h1>
             <h5>April 2021 - June 2021</h5>
     
-            <div class="infobox">
+            <div class="infoboxFull">
+
+                <h5 class="firstHeading">Overview</h5>
+
+                <p class="projectWriteup" alt="Project Image">This robot drives autonomously through the use of a PiCamera and a CNN developed with TensorFlow. 
+                    The robot is equipped with a Raspberry Pi Zero W that transmits images over SSH to a host PC. 
+                    The images are run through the TensorFlow model and commands are returned to the robot.
+                    The CNN was trained on a custom-made dataset of over 1,500 images and the resulting robot is near-perfect at avoiding obstacles.</p>
+
+                <img src="../../img/visionRobot.JPG" class="writeupImage">
+
+                <h5 class="secondHeading">Build Process</h5>
+
+                <img src="img/IMG_3755.JPG" class="writeupImage">
+
+                <p class="imageDescription">Mocking up the idea with Pi, battery pack, and chassis</p>
+
+                <img src="img/IMG_3767.JPG" class="writeupImage">
+
+                <p class="imageDescription">3D-printing mount for camera</p>
+
+                <img src="img/IMG_3769.JPG" class="writeupImage">
+
+                <p class="imageDescription">Testing LEDs on the robot</p>
+
+                <img src="img/IMG_3770.JPG" class="writeupImage">
+
+                <p class="imageDescription">Printing mounts for the LEDs</p>
+
+                <img src="img/IMG_3771.JPG" class="writeupImage">
+
+                <p class="imageDescription">Testing LEDs in mounts</p>
+
+                <img src="img/IMG_3779.JPG" class="writeupImage">
+
+                <p class="imageDescription">Added 3D printed parts, Micro-B breakout for power connection, and L298D motor driver to mockup</p>
+
+                <img src="img/IMG_3780.JPG" class="writeupImage">
+
+                <p class="imageDescription">First wiring of robot -- includes USB hub mounted to bottom of robot to split power to Pi and motor driver</p>
+
+                <img src="img/IMG_3809.JPG" class="writeupImage">
+
+                <p class="imageDescription">Establishing SSH connection between computers. The Pi Zero W does not have sufficient computational power for this sort of vision processing, so I decided that the robot would perform best if these heavy computations were performed remotely.</p>
+
+                <img src="img/IMG_3815.JPG" class="writeupImage">
+
+                <p class="imageDescription">Implemeting SSH to send messages between Pi and PC</p>
+
+                <img src="img/IMG_3819.JPG" class="writeupImage">
+
+                <p class="imageDescription">Sending image (Numpy array) over the SSH connection using the Python Socket and Pickle libraries</p>
+
+                <img src="img/IMG_3832.JPG" class="writeupImage">
+
+                <p class="imageDescription">Robot wiring entirely soldered. This includes soldering all of the headers onto the Pi.</p>
+
+                <img src="img/IMG_3917.JPG" class="writeupImage">
+
+                <p class="imageDescription">3D printing a better mount for the battery pack</p>
+
+                <img src="img/IMG_4032.JPG" class="writeupImage">
+
+                <p class="imageDescription">Added live view of the images on the PC</p>
+
+                <p class="projectWriteup">
+                    After having the physical construction and basic software complete, next came developing the machine learning model.
+                    The goal of the vision processing is to determine if the robot is blocked of not. So, for this classification problem, I went with a CNN.
+                    I chose my network to have 3 layers, of size 76,800 (320 * 240 -- the image size), 100, and 2. The output neurons correspond with 'blocked' and 'open.'
+                    I went with this simple neural structure because differentiating 'blocked' from 'open' is a rather simple classification problem, with only 2 categories and a relatively stark difference between the two.
+                </p>
+
+                <p class="projectWriteup">
+                    Next, I wrote a quick program on the robot to systematically take images to build a dataset. 
+                    This amassed to over 1,500 labeled images.
+                </p>
+
+                <p class="projectWriteup">
+                    The model was trained over 5 epochs. The model was simple enough to do on my CPU -- training time was under 10 minutes. Not very often do I see all 16 threads of my CPU fully maxed out...
+                </p>
+                
+                <img src="img/image2804.png" class="writeupImage">
+
+                <p class="imageDescription">Sample 'blocked' image</p>
+
+                <img src="img/image3354.png" class="writeupImage">
+
+                <p class="imageDescription">Sample 'open' image</p>
+
+                <img src="../../img/visionRobot.JPG" class="writeupImage">
+
+                <p class="projectWriteup">The resulting robot worked great! Whenever it encountered a 'blocked' image, it was programmed to trun around in a random direction.
+                    Additionally, the headlights would enable when the brightness of the image was below a threshold.
+                    Between the PiCamera, SSH, and CNN, the robot executed commands approximately every 0.5 seconds.
+                </p>
 
 
-                <p class="projectWriteup">Coming soon...</p>
+
+
 
     
             </div>
