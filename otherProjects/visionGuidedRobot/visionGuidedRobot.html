@@ -4,6 +4,7 @@
 
         <link href="visionGuidedRobot.css" rel="stylesheet" type="text/css" />
         <link href="../../mainLayout.css" rel="stylesheet" type="text/css" />
+        <link href="../otherProjectWriteup.css" rel="stylesheet" type="text/css" />
         
 
         <title>Vision Guided Robot</title>
@@ -17,15 +18,20 @@
             <h1>Vision Guided Robot</h1>
             <h5>April 2021 - June 2021</h5>
     
-            <div class="infoboxFull">
+            <div class="infoboxFull" id="article">
 
                 <h5 class="firstHeading">Overview</h5>
 
                 <p class="projectWriteup" alt="Project Image">This robot drives autonomously through the use of a PiCamera and a CNN developed with TensorFlow. 
                     The robot is equipped with a Raspberry Pi Zero W that transmits images over SSH to a host PC. 
                     The images are run through the TensorFlow model and commands are returned to the robot.
-                    The CNN was trained on a custom-made dataset of over 1,500 images and the resulting robot is near-perfect at avoiding obstacles.</p>
+                    The CNN was trained on a custom-made dataset of over 1,500 images and the resulting robot is near-perfect at avoiding obstacles.
+                </p>
 
+                <a href="https://github.com/mbryant2025/Vision_Guided_Robot">
+                    <p class="imageDescription" style="color:#2f2fe0;">GitHub Repository</p> 
+                </a>
+                
                 <img src="../../img/visionRobot.JPG" class="writeupImage">
 
                 <h5 class="secondHeading">Build Process</h5>
@@ -106,18 +112,19 @@
 
                 <p class="imageDescription">Sample 'open' image</p>
 
-                <img src="../../img/visionRobot.JPG" class="writeupImage">
+               
 
                 <p class="projectWriteup">The resulting robot worked great! Whenever it encountered a 'blocked' image, it was programmed to trun around in a random direction.
                     Additionally, the headlights would enable when the brightness of the image was below a threshold.
                     Between the PiCamera, SSH, and CNN, the robot executed commands approximately every 0.5 seconds.
                 </p>
 
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/o4q2jD7HNac" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
 
+                <img src="../../img/visionRobot.JPG" class="writeupImage">
 
+                <p class="imageDescription">The Final Robot</p>
 
-
-    
             </div>
 
         </div>
