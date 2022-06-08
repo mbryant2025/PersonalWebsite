@@ -199,3 +199,19 @@ body {
     top:50px;
   }
 
+  @media only screen and (max-width: 760px) {
+      #iframe-container {
+        display: none;
+    }
+    
+    #updateToggle {
+        display: none;
+    }
+    
+    #square {
+        display: none;
+    }
+  
+  }
+
+  
