@@ -211,3 +211,8 @@ a:hover {
     display: grid;
     grid-template-columns: 10% 80% 10%;
 }
+
+.titleWrapper {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+}
