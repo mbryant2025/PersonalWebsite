@@ -12,7 +12,7 @@
     </head>
     <body>
 
-        <a href="../other.html" class="backButton">	&lt;&nbsp;</a>
+        <a href="../other.html" class="backButton">&lt;</a>
 
         <div class="writeupWrapper">
             <h1>Vision Guided Robot</h1>
@@ -20,17 +20,21 @@
     
             <div class="infoboxFull" id="article">
 
-                <h5 class="firstHeading">Overview</h5>
+                <div class="githubIconWrapper">
+                    <div></div>
+                    <div>
+                        <h5 class="firstHeading">Overview</h5>
+                    </div>
+                    <div>
+                        <a href="https://github.com/mbryant2025/Vision_Guided_Robot"><img class="githubIcon" src="../../img/github.png" alt="GitHub Icon"></a>
+                    </div>
+                </div>
 
                 <p class="projectWriteup" alt="Project Image">This robot drives autonomously through the use of a PiCamera and a CNN developed with TensorFlow. 
                     The robot is equipped with a Raspberry Pi Zero W that transmits images over SSH to a host PC. 
                     The images are run through the TensorFlow model and commands are returned to the robot.
                     The CNN was trained on a custom-made dataset of over 1,500 images and the resulting robot is near-perfect at avoiding obstacles.
                 </p>
-
-                <a href="https://github.com/mbryant2025/Vision_Guided_Robot">
-                    <p class="imageDescription" style="color:#2f2fe0;">GitHub Repository</p> 
-                </a>
                 
                 <img src="../../img/visionRobot.JPG" class="writeupImage">
 

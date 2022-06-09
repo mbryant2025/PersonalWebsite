@@ -134,12 +134,16 @@ a:hover {
 }
 
 .backButton {
+    background-color: black;
+    border: none;
     color: white;
-    font-family:'Courier New', Courier, monospace;
-    position: fixed;
-    margin-top: 20px;
-    margin-left: 20px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    position: absolute;
     font-size: 70px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 
 .writeupImage {
@@ -194,4 +198,16 @@ a:hover {
     .infobox {
         width: 95%;
     }
+}
+
+.githubIcon {
+    margin-top: 10px;
+    max-width: 65px;
+    max-height: 65px;
+    position: inline-block;
+}
+
+.githubIconWrapper {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
 }
