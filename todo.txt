@@ -3,3 +3,4 @@ make mobile version
 favicon
 update navbar to include all links
 fix back button
+make info popup before aircraft.html
