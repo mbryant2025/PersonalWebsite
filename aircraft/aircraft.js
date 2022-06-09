@@ -10,7 +10,7 @@ window.onload=function(){
 
     loadLiveAircraft();
 
-    checkSwitch(); //Also checks screen size and displays message as necessary
+    // checkSwitch(); //Also checks screen size and displays message as necessary
     setTimeout(updateMap(), 5000);
 }
 
@@ -23,30 +23,30 @@ function checkScreen() {
 
 }
 
-function checkSwitch() {
+// function checkSwitch() {
 
-    checkScreen();
+//     checkScreen();
 
-    let found = false;
-    Array.from(document.querySelectorAll(":hover")).forEach(function(el) {
-        if (el.id == "map") {
-            found = true;
-        }
-    });
+//     let found = false;
+//     Array.from(document.querySelectorAll(":hover")).forEach(function(el) {
+//         if (el.id == "map") {
+//             found = true;
+//         }
+//     });
 
-    if (!found && toggle) {
-        document.getElementById("switch").checked = true;
-        toggle = false;
-    }
+//     if (!found && toggle) {
+//         document.getElementById("switch").checked = true;
+//         toggle = false;
+//     }
 
-    if (found) {
-        document.getElementById("switch").checked = false;
-        toggle = true;
-    }
+//     if (found) {
+//         document.getElementById("switch").checked = false;
+//         toggle = true;
+//     }
 
-    setTimeout(checkSwitch, 500);
+//     setTimeout(checkSwitch, 500);
 
-}
+// }
 
 function updateMap() {
 
@@ -88,10 +88,10 @@ function updateMap() {
             }
         });
         
-        if (found || !document.getElementById("switch").checked) {
-            container.removeChild(iframe2);
-            return;
-        }
+        // if (found || !document.getElementById("switch").checked) {
+        //     container.removeChild(iframe2);
+        //     return;
+        // }
 
         iframe2.style.visibility = 'visible'; 
 
