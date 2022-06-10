@@ -52,7 +52,7 @@ function updateMap() {
 
     let found = false;
     Array.from(document.querySelectorAll(":hover")).forEach(function(el) {
-        if (el.id == "map") {
+        if (el.id == "map" || el.id == "iframe-container") {
             found = true;
         }
     });
@@ -83,8 +83,9 @@ function updateMap() {
     setTimeout(function(){  
 
         Array.from(document.querySelectorAll(":hover")).forEach(function(el) {
-            if (el.id == "map") {
-                found = true;
+            if (el.id == "map" || el.id == "iframe-container") {
+                container.removeChild(iframe2);
+                return;
             }
         });
         
@@ -96,7 +97,7 @@ function updateMap() {
         iframe2.style.visibility = 'visible'; 
 
         container.removeChild(container.getElementsByTagName('iframe')[0]);
-    }, 5500);
+    }, 2000);
 
 
     setTimeout(updateMap, 5000);
