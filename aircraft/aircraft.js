@@ -8,6 +8,21 @@ window.onload=function(){
     var recordBtn = document.getElementById("liveButton");
     recordBtn.addEventListener("click", showLive);
 
+    var modal = document.getElementById("popup");
+    var span = document.getElementsByClassName("close")[0];
+
+    modal.style.display = "block";
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+      
+    window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+    }
+
     loadLiveAircraft();
 
     // checkSwitch(); //Also checks screen size and displays message as necessary
