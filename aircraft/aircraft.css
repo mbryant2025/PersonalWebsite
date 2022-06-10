@@ -1,6 +1,5 @@
 body {
   background-color: black;
-  padding-bottom: 80%;
 }
 
 .switch {
@@ -92,7 +91,6 @@ body {
 
   .activatedButton {
     background-color: #32a852;
-    position:absolute;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -109,7 +107,6 @@ body {
 
   .neutralButton {
     background-color: #ccc;
-    position:absolute;
     border: none;
     color: black;
     padding: 15px 32px;
@@ -122,16 +119,6 @@ body {
     cursor: pointer;
     transition: 0.2s;
     border-radius: 7px;
-  }
-
-  .button1 {
-    top:85%;
-    left:33%;
-  }
-
-  .button2 {
-    top:85%;
-    right:33%;
   }
 
   .neutralButton:hover {
@@ -172,7 +159,6 @@ body {
   }
 
   #table td, #table th {
-  
     padding: 8px;
     color: white;
     font-family:'Courier New', monospace;
@@ -183,10 +169,11 @@ body {
   }
 
   #table {
-    position:absolute;
-    top:94%;
-    left:15%;
-    width:70%;
+    margin-right: auto;
+    margin-left: auto;
+    width:90%;
+    position: relative;
+    margin-bottom: 30px;
   }
 
 
@@ -195,23 +182,51 @@ body {
   }
 
   #map {
-    position:absolute;
-    top:50px;
+    height: 600px;
+    position: absolute;
+    top: 50px
   }
 
-  @media only screen and (max-width: 760px) {
-      #iframe-container {
-        display: none;
-    }
-    
-    #updateToggle {
-        display: none;
-    }
-    
-    #square {
-        display: none;
-    }
+  .infoboxTable {
+    outline-style: round;
+    background-color: #212121;
+    border-radius: 14px;
+    width: 95%;
+    margin: auto;
+    display: block;
+    overflow: auto;
+    min-height: 200px;
+    margin-top: 25px;
+    position: relative;
+    top: 600px;
+}
+
+#buttonWrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.buttonSpacer {
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 760px) {
+  #iframe-container {
+      display: none;
+  }
   
+  #updateToggle {
+      display: none;
+  }
+  
+  #square {
+      display: none;
   }
 
-  
+  .infoboxTable {
+    top: 20px;
+  }
+}

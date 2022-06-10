@@ -72,8 +72,8 @@ function updateMap() {
     iframe2.width = "100%";
     iframe2.id = "map";
     iframe2.frameBorder = 0;
-    iframe2.height = "70%";
-    iframe2.style = "position:absolute; top:50px;";
+    iframe2.height = "600px";
+    iframe2.style = "position:absloute; top:50px";
 
 
     iframe2.style.visibility = 'hidden';
