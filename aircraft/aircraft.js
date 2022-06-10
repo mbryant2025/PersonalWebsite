@@ -112,7 +112,7 @@ function updateMap() {
         iframe2.style.visibility = 'visible'; 
 
         container.removeChild(container.getElementsByTagName('iframe')[0]);
-    }, 2000);
+    }, 4000);
 
 
     setTimeout(updateMap, 5000);
