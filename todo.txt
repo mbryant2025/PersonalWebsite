@@ -1,6 +1,5 @@
-add warning screen for when screen is too small
 make mobile version
 favicon
-update navbar to include all links
-fix back button
-make info popup before aircraft.html
+
+supermemebros shouldn't have yellow warning on some devices that causes the progress bar to not show
+supermemebros dynmic back button placement
