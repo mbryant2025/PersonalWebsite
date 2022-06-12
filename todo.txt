@@ -1,5 +1,5 @@
 make mobile version
 favicon
 
-supermemebros shouldn't have yellow warning on some devices that causes the progress bar to not show
-supermemebros dynmic back button placement
+supermemebros sometimes progress bar doesn't show
+supermemebros dynamic back button placement
