@@ -200,6 +200,7 @@ a:hover {
     }
 }
 
+@media (not(max-resolution: 1dppx)) {
     #cube { 
         display: none;
     }
@@ -219,7 +220,7 @@ a:hover {
     .infobox {
         width: 95%;
     }
-
+}
 
 .githubIcon {
     margin-top: 10px;
