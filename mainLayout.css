@@ -200,6 +200,28 @@ a:hover {
     }
 }
 
+@media (pointer:none) and (pointer:coarse) {
+    #cube { 
+        display: none;
+    }
+
+    #tetrahedron {
+        display: none;
+    }
+
+    #dodecahedron {
+        display: none;
+    }
+
+    .wrapper {
+        grid-template-columns: 100% 0%;
+    }
+
+    .infobox {
+        width: 95%;
+    }
+}
+
 .githubIcon {
     margin-top: 10px;
     max-width: 65px;
