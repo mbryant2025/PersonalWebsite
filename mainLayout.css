@@ -200,7 +200,7 @@ a:hover {
     }
 }
 
-@media (max-resolution: 1dppx) {
+@media not (max-resolution: 1dppx) {
     #cube { 
         display: none;
     }
