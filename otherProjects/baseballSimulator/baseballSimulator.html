@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <link href="baseballSimulator.css" rel="stylesheet" type="text/css" />
+        <link href="../../mainLayout.css" rel="stylesheet" type="text/css" />
+        
+
+        <title>Pointillism</title>
+
+    </head>
+    <body>
+
+        <a href="../other.html" class="backButton">&lt;</a>
+
+        <div class="writeupWrapper">
+            
+            <div class="titleWrapper">
+                <div>
+                    <a href="../other.html" class="backButton">&lt;</a>
+                </div>
+                <h1>Baseball Simulator</h1>
+                <div></div>
+            </div>
+
+            <h5>July 2022</h5>
+    
+            <div class="infobox">
+
+
+                <p class="projectWriteup">
+                    
+                    Temporarily pasting data for use later when I actually make this page: <br><br>
+                    
+                    League Leaders:
+
+                    Ty Cobb         Michael's Team  0.367937 BA
+                    Lou Gehrig      Michael's Team  0.355932 BA
+                    Bo Jones        CPU Team 20     0.351562 BA
+                    Hank Aaron      Michael's Team  0.329252 BA
+                    Babe Ruth       Michael's Team  0.323664 BA
+                    Zaiden Harris   CPU Team 24     0.317901 BA
+                    Elisha Taylor   CPU Team 15     0.317647 BA
+                    Tony Brown      CPU Team 26     0.314623 BA
+                    Carter Hall     CPU Team 14     0.312684 BA
+                    Jason Johnson   CPU Team 20     0.310185 BA
+                    ======================================
+                    Slug McSlugger  CPU Team 29     138 HR
+                    Babe Ruth       Michael's Team  58 HR
+                    Mark McGwire    Michael's Team  57 HR
+                    Barry Bonds     Michael's Team  48 HR
+                    Jamir Jones     CPU Team 26     47 HR
+                    Mickey Mantle   Michael's Team  45 HR
+                    Cohen Lewis     CPU Team 19     45 HR
+                    Hank Aaron      Michael's Team  44 HR
+                    Brixton Hernandez       CPU Team 3      42 HR
+                    Jake Martinez   CPU Team 1      41 HR
+                    ======================================
+                    Ty Cobb         Michael's Team  280 H
+                    Lou Gehrig      Michael's Team  252 H
+                    Hank Aaron      Michael's Team  242 H
+                    Bo Jones        CPU Team 20     225 H
+                    Alex Miller     CPU Team 19     221 H
+                    Avi Miller      CPU Team 22     218 H
+                    Elisha Taylor   CPU Team 15     216 H
+                    Ethan Lewis     CPU Team 26     216 H
+                    Callum Moore    CPU Team 15     213 H
+                    Tony Brown      CPU Team 26     213 H
+                    ======================================
+                    Ty Cobb         Michael's Team  199 1B
+                    Hank Aaron      Michael's Team  158 1B
+                    Lou Gehrig      Michael's Team  152 1B
+                    Alex Miller     CPU Team 19     149 1B
+                    Avi Miller      CPU Team 22     146 1B
+                    Elisha Taylor   CPU Team 15     143 1B
+                    Carter Hall     CPU Team 14     142 1B
+                    Jesse Lewis     CPU Team 22     141 1B
+                    Tony Brown      CPU Team 26     139 1B
+                    Jeremiah Jones  CPU Team 5      138 1B
+                    ======================================
+                    Leo Martin      CPU Team 29     52 2B
+                    Damien Martin   CPU Team 18     51 2B
+                    Brody Thomas    CPU Team 20     51 2B
+                    Lou Gehrig      Michael's Team  49 2B
+                    Ethan Lewis     CPU Team 26     49 2B
+                    Kristopher Lee  CPU Team 12     48 2B
+                    Eliseo Miller   CPU Team 20     48 2B
+                    Ty Cobb         Michael's Team  47 2B
+                    Colter Thomas   CPU Team 6      47 2B
+                    Watson Lee      CPU Team 10     47 2B
+                    ======================================
+                    Ty Cobb         Michael's Team  26 3B
+                    Lou Gehrig      Michael's Team  11 3B
+                    Luca Jackson    CPU Team 1      10 3B
+                    Zaire Walker    CPU Team 13     10 3B
+                    Babe Ruth       Michael's Team  9 3B
+                    Mickey Mantle   Michael's Team  9 3B
+                    Kyree Garcia    CPU Team 28     8 3B
+                    Major Jackson   CPU Team 29     8 3B
+                    Salvatore Johnson       CPU Team 29     8 3B
+                    Jake Martinez   CPU Team 1      7 3B
+                    ======================================
+                    Slug McSlugger  CPU Team 29     211 RBI
+                    Babe Ruth       Michael's Team  183 RBI
+                    Mickey Mantle   Michael's Team  181 RBI
+                    Barry Bonds     Michael's Team  177 RBI
+                    Mark McGwire    Michael's Team  174 RBI
+                    Willie Mays     Michael's Team  141 RBI
+                    Cohen Lewis     CPU Team 19     121 RBI
+                    Hank Aaron      Michael's Team  120 RBI
+                    Bo Jones        CPU Team 20     119 RBI
+                    Lou Gehrig      Michael's Team  117 RBI
+                    ======================================
+                    Lou Gehrig      Michael's Team  187 R
+                    Ty Cobb         Michael's Team  174 R
+                    Babe Ruth       Michael's Team  166 R
+                    Hank Aaron      Michael's Team  160 R
+                    Barry Bonds     Michael's Team  148 R
+                    Slug McSlugger  CPU Team 29     143 R
+                    Ethan Lewis     CPU Team 26     122 R
+                    Mickey Mantle   Michael's Team  110 R
+                    Alex Miller     CPU Team 19     110 R
+                    Bo Jones        CPU Team 20     109 R
+                    ======================================
+                    Ty Cobb         Michael's Team  848 PA
+                    Lou Gehrig      Michael's Team  834 PA
+                    Callum Moore    CPU Team 15     826 PA
+                    Brody Thomas    CPU Team 20     822 PA
+                    Elliott Rodriguez       CPU Team 22     820 PA
+                    Kieran Garcia   CPU Team 23     820 PA
+                    Jiraiya Davis   CPU Team 2      818 PA
+                    Hank Aaron      Michael's Team  817 PA
+                    Roland White    CPU Team 3      817 PA
+                    Esteban White   CPU Team 18     817 PA
+                    ======================================
+                    
+                    
+                    Team Leaders:
+                    
+                    Michael's Team  109 W
+                    CPU Team 20     95 W
+                    CPU Team 15     91 W
+                    CPU Team 19     91 W
+                    CPU Team 29     89 W
+                    CPU Team 22     88 W
+                    CPU Team 11     87 W
+                    CPU Team 12     87 W
+                    CPU Team 26     87 W
+                    CPU Team 9      86 W
+                    ======================================
+                    Michael's Team  0.279354 BA
+                    CPU Team 15     0.273216 BA
+                    CPU Team 20     0.268008 BA
+                    CPU Team 19     0.262376 BA
+                    CPU Team 26     0.262133 BA
+                    CPU Team 2      0.262019 BA
+                    CPU Team 22     0.259843 BA
+                    CPU Team 8      0.25897 BA
+                    CPU Team 3      0.257274 BA
+                    CPU Team 18     0.257115 BA
+                    ======================================
+                    CPU Team 29     345 HR
+                    Michael's Team  339 HR
+                    CPU Team 26     283 HR
+                    CPU Team 12     270 HR
+                    CPU Team 19     270 HR
+                    CPU Team 22     269 HR
+                    CPU Team 3      266 HR
+                    CPU Team 4      266 HR
+                    CPU Team 11     263 HR
+                    CPU Team 5      261 HR
+                    ======================================
+                    Michael's Team  1713 H
+                    CPU Team 15     1677 H
+                    CPU Team 20     1652 H
+                    CPU Team 19     1590 H
+                    CPU Team 26     1588 H
+                    CPU Team 2      1586 H
+                    CPU Team 22     1584 H
+                    CPU Team 18     1572 H
+                    CPU Team 23     1567 H
+                    CPU Team 3      1565 H
+                    ======================================
+                    CPU Team 15     1079 1B
+                    CPU Team 20     1025 1B
+                    CPU Team 2      1014 1B
+                    Michael's Team  1009 1B
+                    CPU Team 22     1000 1B
+                    CPU Team 23     988 1B
+                    CPU Team 9      979 1B
+                    CPU Team 8      971 1B
+                    CPU Team 3      969 1B
+                    CPU Team 19     968 1B
+                    ======================================
+                    CPU Team 20     345 2B
+                    CPU Team 12     338 2B
+                    CPU Team 18     338 2B
+                    CPU Team 11     327 2B
+                    CPU Team 15     326 2B
+                    CPU Team 19     323 2B
+                    CPU Team 6      318 2B
+                    CPU Team 23     316 2B
+                    CPU Team 24     316 2B
+                    CPU Team 26     312 2B
+                    ======================================
+                    Michael's Team  69 3B
+                    CPU Team 1      40 3B
+                    CPU Team 29     39 3B
+                    CPU Team 6      35 3B
+                    CPU Team 18     35 3B
+                    CPU Team 5      33 3B
+                    CPU Team 7      31 3B
+                    CPU Team 23     31 3B
+                    CPU Team 13     30 3B
+                    CPU Team 22     30 3B
+                    ======================================
+                    Michael's Team  1153 R
+                    CPU Team 15     803 R
+                    CPU Team 19     798 R
+                    CPU Team 20     788 R
+                    CPU Team 5      767 R
+                    CPU Team 26     765 R
+                    CPU Team 2      760 R
+                    CPU Team 22     751 R
+                    CPU Team 4      745 R
+                    CPU Team 3      740 R
+                    ======================================
+                    Michael's Team  7102 PA
+                    CPU Team 15     6747 PA
+                    CPU Team 20     6743 PA
+                    CPU Team 22     6724 PA
+                    CPU Team 18     6707 PA
+                    CPU Team 23     6686 PA
+                    CPU Team 19     6666 PA
+                    CPU Team 3      6647 PA
+                    CPU Team 9      6647 PA
+                    CPU Team 26     6646 PA
+                    ======================================
+                    
+                    
+                    Record Scores:
+                    
+                    Highest Score:
+                    CPU Team 4 vs. CPU Team 11: 24 - 2
+                    
+                    
+                    Highest Combined Score:
+                    CPU Team 14 vs. CPU Team 23: 22 - 17
+                    
+                    
+                    Lowest Combined Score:
+                    CPU Team 21 vs. CPU Team 10: 1 - 0
+                    
+                    
+                    ======================================================================================================================
+                    Regular Season Roster Statistics:
+                    
+                    109 wins out of 162 games played
+                    
+                    Ty Cobb                 0.367937 BA     8 HR    280 H   199 1B  47 2B   26 3B   87 BB   174 R   848 PA  59 RBI
+                    Lou Gehrig              0.355932 BA     40 HR   252 H   152 1B  49 2B   11 3B   126 BB  187 R   834 PA  117 RBI
+                    Hank Aaron              0.329252 BA     44 HR   242 H   158 1B  36 2B   4 3B    82 BB   160 R   817 PA  120 RBI
+                    Babe Ruth               0.323664 BA     58 HR   212 H   100 1B  45 2B   9 3B    147 BB  166 R   802 PA  183 RBI
+                    Barry Bonds             0.298722 BA     48 HR   187 H   96 1B   39 2B   4 3B    166 BB  148 R   792 PA  177 RBI
+                    Willie Mays             0.274074 BA     39 HR   185 H   106 1B  34 2B   6 3B    99 BB   103 R   774 PA  141 RBI
+                    Mickey Mantle           0.295638 BA     45 HR   183 H   105 1B  24 2B   9 3B    140 BB  110 R   759 PA  181 RBI
+                    Mark McGwire            0.271132 BA     57 HR   170 H   91 1B   22 2B   0 3B    121 BB  103 R   748 PA  174 RBI
+                    Michael Bryant          0.00275482 BA   0 HR    2 H     2 1B    0 2B    0 3B    2 BB    2 R     728 PA  1 RBI
+                    ======================================================================================================================
+                    Michael's Team          0.279354 BA     339 HR  1713 H  1009 1B 296 2B  69 3B   970 BB  1153 R  7102 PA 1153 RBI
+                    
+                    
+                    Playoffs:
+                    
+                    
+                    ALWC
+                    ==========
+                    CPU Team 26 (5) defeated CPU Team 12 (4) 12-1
+                    
+                    CPU Team 26 (5) has won the ALWC against CPU Team 12 (4) 1-0
+                    
+                    
+                    NLWC
+                    ==========
+                    CPU Team 11 (4) defeated CPU Team 9 (5) 11-1
+                    
+                    CPU Team 11 (4) has won the NLWC against CPU Team 9 (5) 1-0
+                    
+                    
+                    ALDS (1/2)
+                    ==========
+                    Michael's Team (1) defeated CPU Team 26 (5) 9-8
+                    Michael's Team (1) defeated CPU Team 26 (5) 3-0
+                    Michael's Team (1) defeated CPU Team 26 (5) 5-4
+                    
+                    Michael's Team (1) has won the ALDS against CPU Team 26 (5) 3-0
+                    
+                    
+                    ALDS (2/2)
+                    ==========
+                    CPU Team 20 (2) defeated CPU Team 22 (3) 6-1
+                    CPU Team 20 (2) defeated CPU Team 22 (3) 5-4
+                    CPU Team 22 (3) defeated CPU Team 20 (2) 5-1
+                    CPU Team 20 (2) defeated CPU Team 22 (3) 12-6
+                    
+                    CPU Team 20 (2) has won the ALDS against CPU Team 22 (3) 3-1
+                    
+                    
+                    NLDS (1/2)
+                    ==========
+                    CPU Team 11 (4) defeated CPU Team 15 (1) 8-0
+                    CPU Team 11 (4) defeated CPU Team 15 (1) 7-2
+                    CPU Team 11 (4) defeated CPU Team 15 (1) 6-3
+                    
+                    CPU Team 11 (4) has won the NLDS against CPU Team 15 (1) 3-0
+                    
+                    
+                    NLDS (2/2)
+                    ==========
+                    CPU Team 29 (3) defeated CPU Team 19 (2) 6-0
+                    CPU Team 19 (2) defeated CPU Team 29 (3) 11-6
+                    CPU Team 29 (3) defeated CPU Team 19 (2) 7-1
+                    CPU Team 29 (3) defeated CPU Team 19 (2) 7-6
+                    
+                    CPU Team 29 (3) has won the NLDS against CPU Team 19 (2) 3-1
+                    
+                    
+                    ALCS
+                    ==========
+                    CPU Team 20 (2) defeated Michael's Team (1) 10-3
+                    Michael's Team (1) defeated CPU Team 20 (2) 8-5
+                    Michael's Team (1) defeated CPU Team 20 (2) 10-3
+                    Michael's Team (1) defeated CPU Team 20 (2) 4-3
+                    Michael's Team (1) defeated CPU Team 20 (2) 11-4
+                    
+                    Michael's Team (1) has won the ALCS against CPU Team 20 (2) 4-1
+                    
+                    
+                    NLCS
+                    ==========
+                    CPU Team 29 (3) defeated CPU Team 11 (4) 8-4
+                    CPU Team 11 (4) defeated CPU Team 29 (3) 10-8
+                    CPU Team 29 (3) defeated CPU Team 11 (4) 3-2
+                    CPU Team 29 (3) defeated CPU Team 11 (4) 5-4
+                    CPU Team 29 (3) defeated CPU Team 11 (4) 5-0
+                    
+                    CPU Team 29 (3) has won the NLCS against CPU Team 11 (4) 4-1
+                    
+                    WS
+                    ==========
+                    Michael's Team (1) defeated CPU Team 29 (3) 8-2
+                    Michael's Team (1) defeated CPU Team 29 (3) 10-7
+                    Michael's Team (1) defeated CPU Team 29 (3) 12-7
+                    CPU Team 29 (3) defeated Michael's Team (1) 10-3
+                    Michael's Team (1) defeated CPU Team 29 (3) 12-8
+                    
+                    Michael's Team (1) has won the World Series against CPU Team 29 (3) 4-1</p>
+
+    
+            </div>
+
+        </div>
+
+        
+        
+    </body>
+</html>

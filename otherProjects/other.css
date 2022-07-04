@@ -26,6 +26,13 @@
     float: right;
 }
 
+#baseball {
+    max-width:200px;
+    max-height:300px;
+    margin-top:50px;
+    float: right;
+}
+
 #forklift {
     max-width:180px;
     max-height:180px;
