@@ -1,0 +1,283 @@
+body {
+    background-color: black;
+    margin-bottom: 630px;
+  }
+  
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    position:absolute;
+    top:77%;
+    left:8px;
+  }
+
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  input:checked + .slider {
+    background-color: #32a852;
+  }
+  
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  .paragraph {
+    color:white;
+    font-family:'Courier New', monospace;
+    font-size:20px;
+    text-align:left;
+    position:absolute;
+  }
+
+  .paragraph1 {
+    top:75.5%;
+    left:75px;
+  }
+
+  .paragraph2 {
+    top:76%;
+    right:280px;
+  }
+
+  .paragraph3 {
+    top:76%;
+    right:20px;
+  }
+
+  .paragraph4 {
+    top:80.7%;
+    right:280px;
+  }
+
+  .activatedButton {
+    background-color: #32a852;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family:'Courier New', monospace;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: 0.2s;
+    border-radius: 7px;
+  }
+
+  .neutralButton {
+    background-color: #ccc;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family:'Courier New', monospace;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: 0.2s;
+    border-radius: 7px;
+  }
+
+  .neutralButton:hover {
+    background-color: #32a852;
+    color: white;
+  }
+
+  .activatedButton:hover {
+    background-color: #36d661;
+    color: white;
+  }
+
+  .square {
+    height: 5%;
+    width: 200px;
+    position: absolute;
+  }
+
+  .gradient {
+    top:76.5%;
+    right:75px;
+    background-image: linear-gradient(to right, white, blue);
+  }
+
+  .solid {
+    top:81.5%;
+    right:75px;
+    background-color:#32a852;
+  }
+
+  #table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #32a852;
+    color: white;
+    font-family:'Courier New', monospace;
+  }
+
+  #table td, #table th {
+    padding: 8px;
+    color: white;
+    font-family:'Courier New', monospace;
+  }
+
+  #table tr:hover {
+    background-color: #2e2d2d;
+  }
+
+  #table {
+    margin-right: auto;
+    margin-left: auto;
+    width:90%;
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+
+  #iframe-container {
+    margin-left:-8px;
+  }
+
+  #map {
+    height: 600px;
+    position: absolute;
+    top: 50px
+  }
+
+  .infoboxTable {
+    outline-style: round;
+    background-color: #212121;
+    border-radius: 14px;
+    width: 95%;
+    margin: auto;
+    display: block;
+    overflow: auto;
+    min-height: 200px;
+    margin-top: 25px;
+    position: relative;
+    top: 600px;
+}
+
+#buttonWrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.buttonSpacer {
+    display: flex;
+    justify-content: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(33,33,33);
+  background-color: rgba(33,33,33,0.4);
+}
+
+.modal-content {
+  background-color: #ccc;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid black;
+  width: 35%;
+  margin-top: 100px;
+}
+
+.close {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#popupTitle {
+  font-family:'Courier New', monospace;
+  font-size: 40px;
+  text-align: center;
+  color: black;
+}
+
+.popupText {
+  font-family:'Courier New', monospace;
+  font-size: 20px;
+  text-align: center;
+  color: black;
+}
+
+@media only screen and (max-width: 760px) {
+  #iframe-container {
+      display: none;
+  }
+  
+  #updateToggle {
+      display: none;
+  }
+  
+  #square {
+      display: none;
+  }
+
+  .infoboxTable {
+    top: 20px;
+  }
+}
