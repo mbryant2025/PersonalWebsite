@@ -87,7 +87,6 @@ function loadProgramming() {
             let cell1 = row.insertCell(0);
             let cell2 = row.insertCell(1);
 
-            let number = i+1;
             let skill = programming[i].skill;
             let experience = programming[i].experience;
 
@@ -118,7 +117,6 @@ function loadElectronics() {
             let cell1 = row.insertCell(0);
             let cell2 = row.insertCell(1);
 
-            let number = i+1;
             let skill = electronics[i].skill;
             let experience = electronics[i].experience;
 
@@ -150,7 +148,6 @@ function loadEquipment() {
             let cell1 = row.insertCell(0);
             let cell2 = row.insertCell(1);
 
-            let number = i+1;
             let skill = equipment[i].skill;
             let experience = equipment[i].experience;
 
