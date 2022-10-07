@@ -1,8 +1,5 @@
 window.onload=function(){
 
-    var allBtn = document.getElementById("allButton");
-    allBtn.addEventListener("click", showAll);
-
     var progBtn = document.getElementById("programmingButton");
     progBtn.addEventListener("click", showProgramming);
 
@@ -12,33 +9,13 @@ window.onload=function(){
     var equipmentBtn = document.getElementById("equipmentButton");
     equipmentBtn.addEventListener("click", showEquipment);
 
-    showAll();
+    showProgramming();
 
 }
 
-
-function showAll() {
-
-    document.getElementById("allButton").classList.add('activatedButton');
-    document.getElementById("allButton").classList.remove('neutralButton');
-
-    document.getElementById("programmingButton").classList.add('neutralButton');
-    document.getElementById("programmingButton").classList.remove('activatedButton');
-
-    document.getElementById("electronicsButton").classList.add('neutralButton');
-    document.getElementById("electronicsButton").classList.remove('activatedButton');
-
-    document.getElementById("equipmentButton").classList.add('neutralButton');
-    document.getElementById("equipmentButton").classList.remove('activatedButton');
-
-    loadAll()
-}
 
 function showProgramming() {
     
-    document.getElementById("allButton").classList.add('neutralButton');
-    document.getElementById("allButton").classList.remove('activatedButton');
-
     document.getElementById("programmingButton").classList.add('activatedButton');
     document.getElementById("programmingButton").classList.remove('neutralButton');
 
@@ -52,8 +29,6 @@ function showProgramming() {
 }
 
 function showElectronics() {
-    document.getElementById("allButton").classList.add('neutralButton');
-    document.getElementById("allButton").classList.remove('activatedButton');
 
     document.getElementById("programmingButton").classList.add('neutralButton');
     document.getElementById("programmingButton").classList.remove('activatedButton');
@@ -68,8 +43,6 @@ function showElectronics() {
 }
 
 function showEquipment() {
-    document.getElementById("allButton").classList.add('neutralButton');
-    document.getElementById("allButton").classList.remove('activatedButton');
 
     document.getElementById("programmingButton").classList.add('neutralButton');
     document.getElementById("programmingButton").classList.remove('activatedButton');
@@ -83,24 +56,110 @@ function showEquipment() {
     loadEquipment()
 }
 
-
-function loadAll() {
-
-    
+function readTextFile(file, callback) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType("application/json");
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+            callback(rawFile.responseText);
+        }
+    }
+    rawFile.send(null);
 }
 
 
 function loadProgramming() {
     
+    var table = document.getElementById("table");
+
+    for (let i = table.rows.length - 1; i > 0; i--) {
+        table.deleteRow(i);
+    }
+
+    readTextFile("skills.json", function(text){
+        var data = JSON.parse(text);
+        var programming = data.programming;
+
+        for (let i = 0; i < programming.length; i++) {
+            let row = table.insertRow(i+1);
+
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+
+            let number = i+1;
+            let skill = programming[i].skill;
+            let experience = programming[i].experience;
+
+
+            cell1.innerHTML = skill;
+            cell2.innerHTML = experience;
+
+        }
+    });
         
 }
 
 function loadElectronics() {
+
+    var table = document.getElementById("table");
+
+    for (let i = table.rows.length - 1; i > 0; i--) {
+        table.deleteRow(i);
+    }
+
+    readTextFile("skills.json", function(text){
+        var data = JSON.parse(text);
+        var electronics = data.electronics;
+
+        for (let i = 0; i < electronics.length; i++) {
+            let row = table.insertRow(i+1);
+
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+
+            let number = i+1;
+            let skill = electronics[i].skill;
+            let experience = electronics[i].experience;
+
+
+            cell1.innerHTML = skill;
+            cell2.innerHTML = experience;
+
+        }
+    });
         
         
 }
 
 function loadEquipment() {
+
+    var table = document.getElementById("table");
+
+    for (let i = table.rows.length - 1; i > 0; i--) {
+        table.deleteRow(i);
+    }
+
+    readTextFile("skills.json", function(text){
+        var data = JSON.parse(text);
+        var equipment = data.equipment;
+
+        for (let i = 0; i < equipment.length; i++) {
+            let row = table.insertRow(i+1);
+
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+
+            let number = i+1;
+            let skill = equipment[i].skill;
+            let experience = equipment[i].experience;
+
+            cell1.innerHTML = skill;
+            cell2.innerHTML = experience;
+
+            
+        }
+    });
 
         
 }

@@ -1,0 +1,96 @@
+{
+    
+    "programming": [
+    {
+        "skill": "Python",
+        "experience": "5 Years"
+    }, {
+        "skill": "C",
+        "experience": "3 Years"
+    },{
+        "skill": "C++",
+        "experience": "2 Years"
+    },{
+        "skill": "Java",
+        "experience": "3 Years"
+    },{
+        "skill": "Git",
+        "experience": "3 Years"
+    }, {
+        "skill": "ROS",
+        "experience": "1 Year"
+    }, {
+        "skill": "Docker",
+        "experience": "2 Years"
+    },{
+        "skill": "TensorFlow",
+        "experience": "2 Years"
+    },{
+        "skill": "UNIX",
+        "experience": "4 Years"
+    }, {
+        "skill": "MATLAB",
+        "experience": "1 Year"
+    }, {
+        "skill": "HTML/CSS/JS",
+        "experience": "Enough to Make this Website"
+    }, {
+        "skill": "C#",
+        "experience": "Made Unity Game"
+    }
+    ],
+
+    "electronics": [
+        {
+            "skill": "Altium Designer",
+            "experience": "1 Year — Summer Internship"
+        },
+        {
+            "skill": "Autodesk EAGLE",
+            "experience": "2 Years — Duke Robotics Club"
+        },
+        {
+            "skill": "LTSpice",
+            "experience": "2 Years"
+        },
+        {
+            "skill": "Raspberry Pi",
+            "experience": "4 Years"
+        },{
+            "skill": "Arduino",
+            "experience": "6 Years"
+        },{
+            "skill": "Oscilloscopes",
+            "experience": "4 Years"
+        },{
+            "skill": "Saleae Logic Analyzers",
+            "experience": "2 Years"
+        },{
+            "skill": "PC Hadware",
+            "experience": "3 Years"
+        }, {
+            "skill": "SMT Manufacturing",
+            "experience": "1 Year — Summer Internship"
+        },{
+            "skill": "Soldering",
+            "experience": "7 Years"
+        },{
+            "skill": "Function Generators & Power Supplies",
+            "experience": "4 Years"
+        }
+    ],
+
+    "equipment": [
+        {
+            "skill": "Milling",
+            "experience": "6 Years"
+        },{
+            "skill": "Lathes",
+            "experience": "6 Years"
+        },{
+            "skill": "3D Printers",
+            "experience": "4 Years"
+        }
+    ]
+
+}

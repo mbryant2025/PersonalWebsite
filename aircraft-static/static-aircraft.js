@@ -85,8 +85,6 @@ function loadLiveAircraft() {
         var data = JSON.parse(text);
         var aircraft = data.data;
 
-        console.log(aircraft);
-
         for (let i = 0; i < aircraft.length; i++) {
             let row = table.insertRow(i+1);
 
