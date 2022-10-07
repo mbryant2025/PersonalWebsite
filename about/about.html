@@ -1,53 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <link href="../mainLayout.css" rel="stylesheet" type="text/css" />
+
+        <script src="about.js"></script>
         <link href="about.css" rel="stylesheet" type="text/css" />
-        <script src="../updateScreen.js"></script>
+        <link href="../mainLayout.css" rel="stylesheet" type="text/css" />
+        <link href="/otherProjects/otherProjectWriteup.css" rel="stylesheet" type="text/css" />
         
-        <title>About</title>
+        
+
+        <title>About Me</title>
 
     </head>
     <body>
 
         <a href="../index.html" class="backButton">&lt;</a>
 
-        <div class="wrapper">
-            <div>
-                
-                <div class="titleWrapper">
-                    <div>
-                        <a href="../index.html" class="backButton">&lt;</a>
-                    </div>
-                    <h1>About</h1>
-                    <div></div>
-                </div>
-
+            <div class="titleWrapper">
                 <div>
-                    <div class="infobox">
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-                            <div class="divColumnBig">
-                                <p class="projectTitle">About</p>
-                                <p class="description">Interesting stuff to come here...</p>
-                            </div>
-                            <div class="divColumnSmall">
-                                <img src="/img/rick.png" class="projectImage">
-                            </div>
-                        </a>
-                        
-                    </div>
+                    <a href="../index.html" class="backButton">&lt;</a>
+                </div>
+                <h1>Michael Bryant</h1>
+                <div>
+                </div>
+            </div>               
+    
+            <div class="infoboxFull" id="article">
 
+                <div id="buttonWrapper">
+                    <div>
+                        <div class="buttonSpacer">
+                            <button id="allButton" class="activatedButton">All Skills</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="buttonSpacer">
+                            <button id="programmingButton" class="neutralButton">Programming</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="buttonSpacer">
+                            <button id="electronicsButton" class="neutralButton">Electronics</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="buttonSpacer">
+                            <button id="equipmentButton" class="neutralButton">Equipment</button>
+                        </div>
+                    </div>
                 </div>
 
             </div>
-            
-            <div>
-                <canvas id="dodecahedron"></canvas>
-
-            </div>
-        </div>
-
-        <script type="module" src="about.js"></script>
 
     </body>
 </html>

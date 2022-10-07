@@ -55,7 +55,6 @@ body {
     background-color: #32a852;
   }
   
-  
   input:checked + .slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);

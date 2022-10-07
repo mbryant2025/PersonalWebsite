@@ -1,44 +1,106 @@
-import * as THREE from '../libraries/three/build/three.module.js';
+window.onload=function(){
 
-const scene = new THREE.Scene();
+    var allBtn = document.getElementById("allButton");
+    allBtn.addEventListener("click", showAll);
 
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.set(2,2,2);
-camera.lookAt(new THREE.Vector3(0,0,0));
+    var progBtn = document.getElementById("programmingButton");
+    progBtn.addEventListener("click", showProgramming);
 
-const renderer = new THREE.WebGLRenderer( {
-    canvas: document.querySelector('#dodecahedron')
-});
+    var electronicsBtn = document.getElementById("electronicsButton");
+    electronicsBtn.addEventListener("click", showElectronics);
 
-renderer.setSize(window.devicePixelRatio);
-renderer.setSize(window.innerWidth, window.innerHeight);
+    var equipmentBtn = document.getElementById("equipmentButton");
+    equipmentBtn.addEventListener("click", showEquipment);
 
-renderer.render(scene, camera);
+    showAll();
 
-const geometry = new THREE.DodecahedronGeometry(0.75, 0);
-
-const edges = new THREE.EdgesGeometry(geometry);
-const dodecahedron = new THREE.LineSegments( edges, new THREE.LineBasicMaterial( { color: 0x00ff00 } ) );
-scene.add(dodecahedron);
-
-dodecahedron.rotation.x = -0.1;
-dodecahedron.rotation.y = -0.2;
-dodecahedron.rotation.z = 0.2;
-
-dodecahedron.position.x = 1.8;
-dodecahedron.position.y = 0;
-dodecahedron.position.z = -1.8;
-
-scene.add(dodecahedron);
-
-var i = 0;
-
-function rotate() {
-    requestAnimationFrame(rotate);
-    dodecahedron.rotation.x += 0.004;
-    dodecahedron.rotation.y -= 0.0025;
-    dodecahedron.rotation.z -= 0.0001;
-    renderer.render(scene, camera);
 }
 
-rotate();
+
+function showAll() {
+
+    document.getElementById("allButton").classList.add('activatedButton');
+    document.getElementById("allButton").classList.remove('neutralButton');
+
+    document.getElementById("programmingButton").classList.add('neutralButton');
+    document.getElementById("programmingButton").classList.remove('activatedButton');
+
+    document.getElementById("electronicsButton").classList.add('neutralButton');
+    document.getElementById("electronicsButton").classList.remove('activatedButton');
+
+    document.getElementById("equipmentButton").classList.add('neutralButton');
+    document.getElementById("equipmentButton").classList.remove('activatedButton');
+
+    loadAll()
+}
+
+function showProgramming() {
+    
+    document.getElementById("allButton").classList.add('neutralButton');
+    document.getElementById("allButton").classList.remove('activatedButton');
+
+    document.getElementById("programmingButton").classList.add('activatedButton');
+    document.getElementById("programmingButton").classList.remove('neutralButton');
+
+    document.getElementById("electronicsButton").classList.add('neutralButton');
+    document.getElementById("electronicsButton").classList.remove('activatedButton');
+
+    document.getElementById("equipmentButton").classList.add('neutralButton');
+    document.getElementById("equipmentButton").classList.remove('activatedButton');
+
+    loadProgramming()
+}
+
+function showElectronics() {
+    document.getElementById("allButton").classList.add('neutralButton');
+    document.getElementById("allButton").classList.remove('activatedButton');
+
+    document.getElementById("programmingButton").classList.add('neutralButton');
+    document.getElementById("programmingButton").classList.remove('activatedButton');
+
+    document.getElementById("electronicsButton").classList.add('activatedButton');
+    document.getElementById("electronicsButton").classList.remove('neutralButton');
+
+    document.getElementById("equipmentButton").classList.add('neutralButton');
+    document.getElementById("equipmentButton").classList.remove('activatedButton');
+
+    loadElectronics()
+}
+
+function showEquipment() {
+    document.getElementById("allButton").classList.add('neutralButton');
+    document.getElementById("allButton").classList.remove('activatedButton');
+
+    document.getElementById("programmingButton").classList.add('neutralButton');
+    document.getElementById("programmingButton").classList.remove('activatedButton');
+
+    document.getElementById("electronicsButton").classList.add('neutralButton');
+    document.getElementById("electronicsButton").classList.remove('activatedButton');
+
+    document.getElementById("equipmentButton").classList.add('activatedButton');
+    document.getElementById("equipmentButton").classList.remove('neutralButton');
+
+    loadEquipment()
+}
+
+
+function loadAll() {
+
+    
+}
+
+
+function loadProgramming() {
+    
+        
+}
+
+function loadElectronics() {
+        
+        
+}
+
+function loadEquipment() {
+
+        
+}
