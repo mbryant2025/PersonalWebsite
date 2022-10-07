@@ -18,7 +18,7 @@ renderer.render(scene, camera);
 const geometry = new THREE.TetrahedronGeometry(1, 0);
 
 const edges = new THREE.EdgesGeometry(geometry);
-const tetrahedron = new THREE.LineSegments( edges, new THREE.LineBasicMaterial( { color: 0x0000ff } ) );
+const tetrahedron = new THREE.LineSegments( edges, new THREE.LineBasicMaterial( { color: 0x00ff00 } ) );
 scene.add(tetrahedron);
 
 tetrahedron.rotation.x = -0.1;

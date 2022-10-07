@@ -47,6 +47,13 @@
     float: right;
 }
 
+#mandelbrot {
+    max-width:180px;
+    max-height:180px;
+    margin-top:40px;
+    float: right;
+}
+
 #countdown {
     max-width:180px;
     max-height:180px;

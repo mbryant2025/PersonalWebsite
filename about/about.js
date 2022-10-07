@@ -18,7 +18,7 @@ renderer.render(scene, camera);
 const geometry = new THREE.DodecahedronGeometry(0.75, 0);
 
 const edges = new THREE.EdgesGeometry(geometry);
-const dodecahedron = new THREE.LineSegments( edges, new THREE.LineBasicMaterial( { color: 0xff0000 } ) );
+const dodecahedron = new THREE.LineSegments( edges, new THREE.LineBasicMaterial( { color: 0x00ff00 } ) );
 scene.add(dodecahedron);
 
 dodecahedron.rotation.x = -0.1;
