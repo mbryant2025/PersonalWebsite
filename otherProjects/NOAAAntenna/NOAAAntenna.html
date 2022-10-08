@@ -25,13 +25,104 @@
 
             <h5>July 2019 - August 2019</h5>
     
-            <div class="infobox">
+            <div class="infoboxFull" id="article">
 
+                <h5 class="firstHeading">Overview</h5>
 
-                <p class="projectWriteup">Coming soon...</p>
+                <p class="projectWriteup" alt="Project Image">This project entails pulling satellite imagery directly off of orbiting NOAA weather satellites.
+                    The custom-made 137 MHz double cross antenna is connected to an SDR where NOAA weather broadcasts can be received.
+                    The data from the SDR is read in through CubicSDR and then pipelined with Soundflower to WXtoImg where it is rendered.
+                </p>
 
-    
+                <img src="./img/success_cropped.jpg" class="writeupImage">
+
+                <h5 class="secondHeading">Build Process</h5>
+
+                <p class="projectWriteup">
+                    The main operating principle behind this project is that NOAA transmissions are not encrypted. Weather stations can receive thier signals just as anyone can.
+                    As long as the antenna matches the signal characteristics of the broadcasting satellites, the imagery can be rendered.
+                    After some quick internet searching, it was determined that the satellites broadcast at 137 MHz with linear polarization.
+                    In the name of trying the simplest solution first, I constructed a half wavelength diploe antenna for this frequency.
+                </p>
+
+                <img src="./img/IMG_8975.jpeg" class="writeupImage">
+
+                <p class="imageDescription">Diploe antenna. And no, nighttime wasn't going to stop me from testing it.</p>
+
+                <p class="projectWriteup">
+                    I also configured all of the software prior to this test, but more on that later.
+                    The conclusion from this test was that the dipole was hot garbage.
+                </p>
+
+                <img src="./img/first_attempt.jpg" class="writeupImage">
+
+                <p class="imageDescription">Diploe render. The dark row in the middle of the image is the only data that was actually received -- and not very well at that.</p>
+
+                <p class="projectWriteup">
+                    Given the signal characteristics, I then built a (massive) 137 MHz double cross antenna. 
+                    The construction of this is pretty standard...half wavelength dipoles mounted 30º from the vertical with one quarter wavelength phasing wires on two opposing sides of the antenna.
+                    The physical construction was made out of PVC pipes with a wooden base.
+                </p>
+
+                <img src="./img/IMG_8997.jpeg" class="writeupImage">
+
+                <p class="imageDescription">The completed double cross antenna</p>
+
+                <p class="projectWriteup">
+                    The software for this project was relatively straightforward. I first configured CubicSDR to interface with the RTL-SDR that connected to the antenna via SMA.
+                    I confirmed this by tuning into some local radio stations with my antenna. Once this was confirmed to be working, I pipelined the output to WXtoImg.
+                    All that was left was to configure CubicSDR to listen for 137MHz at the right time. This coordination was enabled by a feature of WXtoImg which using location data to determine when satellies are overhead.
+                    The result of this setup was a success!
+                </p>
+
+                <img src="./img/IMG_9002.jpeg" class="writeupImage">
+
+                <p class="imageDescription">WXtoIMG on the left rendering the image, CubicSDR on the right showing the signal waterfall</p>
+
+                <p class="projectWriteup">
+                    Fully receiving an image takes about ten minutes. Over this time, the antenna will pass overhead and will eventually fall back under the horizon where the signal is then lost.
+                    The omnidirectional charactertics of the double cross antenna provide a satisfactory gain throughout the path of the satellite.
+                </p>
+
+                <img src="./img/noaa-15-08302304-contrastb.jpg" class="writeupImage">
+
+                <p class="imageDescription">A full rendering clearly showcasing when the horizon comes into play</p>
+
+                <p class="projectWriteup">
+                   It is worth noting that the four NOAA satellites only broadcast black and white imagery. All color added to these images is false color.
+                </p>
+
+                <img src="./img/IMG_9003.jpeg" class="writeupImage">
+
+                <p class="imageDescription">Running all of the software is very intensive both for my laptop and for the SDR. The angle aluminum here serves as heatsinks.</p>
+
+                <p class="projectWriteup">
+                   Over the following few weeks, I ran the system many more times. Below is a gallery of some of these renders!
+                </p>
+
+                <img src="./img/noaa-19-08062036-hvct.jpg" class="writeupImage">
+
+                <img src="./img/newantenna.jpg" class="writeupImage">
+
+                <img src="./img/noaa-18-08010132-contrastb.jpg" class="writeupImage">
+
+                <img src="./img/noaa-19-08062036-contrastb.jpg" class="writeupImage">
+
+                <img src="./img/noaa-19-08062036-no.jpg" class="writeupImage">
+
+                <img src="./img/noaa-18-08061436-norm.jpg" class="writeupImage">
+
+                <p class="projectWriteup">
+                    In the future I'd like to try and pull from some of the GOES satellites all the way up in geosynchronous orbit with some sort of Yagi.
+                    I also want to look into an antenna tracker for the NOAA satellites. We'll see...
+                 </p>
+
+                
+
+                
             </div>
+
+        </div>
 
         </div>
 
