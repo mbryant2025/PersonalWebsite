@@ -1,6 +1,6 @@
 body {
     background-color: black;
-    margin-bottom: 50px;
+    margin-bottom: 500px;
   }
 
 .activatedButton {
@@ -49,7 +49,7 @@ body {
 
   #buttonWrapper {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 25% 25% 25% 25%;
     margin-top: 25px;
     margin-bottom: 25px;
 }

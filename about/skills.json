@@ -1,97 +1,115 @@
 {
     
-    "programming": [
+    "skills": [
     {
         "skill": "Python",
-        "experience": "5 Years"
+        "experience": "5 Years",
+        "category": "programming"
     }, {
         "skill": "C",
-        "experience": "3 Years"
+        "experience": "3 Years",
+        "category": "programming"
     },{
         "skill": "C++",
-        "experience": "2 Years"
+        "experience": "3 Years",
+        "category": "programming"
     },{
-        "skill": "Java",
-        "experience": "3 Years"
+        "skill": "Altium Designer",
+        "experience": "1 Year — Summer Internship",
+        "category": "electronics"
     },{
         "skill": "Git",
-        "experience": "3 Years"
+        "experience": "3 Years",
+        "category": "programming"
     }, {
         "skill": "ROS",
-        "experience": "1 Year"
+        "experience": "1 Year",
+        "category": "programming"
     }, {
         "skill": "Docker",
-        "experience": "2 Years"
+        "experience": "2 Years",
+        "category": "programming"
     },{
         "skill": "TensorFlow & OpenCV",
-        "experience": "2 Years"
+        "experience": "2 Years",
+        "category": "programming"
     },{
-        "skill": "UNIX",
-        "experience": "4 Years"
+        "skill": "Unix",
+        "experience": "4 Years",
+        "category": "programming"
     }, {
         "skill": "MATLAB",
-        "experience": "1 Year"
+        "experience": "1 Year",
+        "category": "programming"
     }, {
-        "skill": "HTML/CSS/JS",
-        "experience": "Enough to Make This Website"
-    }, {
-        "skill": "C#",
-        "experience": "Made Unity Game"
-    }
-    ],
-
-    "electronics": [
-    {
-        "skill": "Altium Designer",
-        "experience": "1 Year — Summer Internship"
-    },
-    {
+        "skill": "Raspberry Pi",
+        "experience": "4 Years",
+        "category": "electronics"
+    },{
+        "skill": "Arduino & Robotics Electronics",
+        "experience": "6 Years",
+        "category": "electronics"
+    },{
+        "skill": "Oscilloscopes",
+        "experience": "4 Years",
+        "category": "electronics"
+    },{
+        "skill": "Saleae Logic Analyzers",
+        "experience": "2 Years",
+        "category": "electronics"
+    },{
         "skill": "Autodesk EAGLE",
-        "experience": "2 Years — Duke Robotics Club"
+        "experience": "2 Years — Duke Robotics Club",
+        "category": "electronics"
+    },{
+        "skill": "3D Printers",
+        "experience": "4 Years",
+        "category": "equipment"
+    },{
+        "skill": "Java",
+        "experience": "3 Years",
+        "category": "programming"
     },
     {
         "skill": "LTspice",
-        "experience": "2 Years"
-    },{
-        "skill": "Raspberry Pi",
-        "experience": "4 Years"
-    },{
-        "skill": "Arduino & Robotics Electronics",
-        "experience": "6 Years"
-    },{
-        "skill": "Oscilloscopes",
-        "experience": "4 Years"
-    },{
-        "skill": "Saleae Logic Analyzers",
-        "experience": "2 Years"
+        "experience": "2 Years",
+        "category": "electronics"
     },{
         "skill": "PC Hadware",
-        "experience": "3 Years"
+        "experience": "3 Years",
+        "category": "electronics"
     }, {
         "skill": "SMT Manufacturing",
-        "experience": "1 Year — Summer Internship"
+        "experience": "1 Year — Summer Internship",
+        "category": "electronics"
     },{
         "skill": "SDRs",
-        "experience": "4 Years"
+        "experience": "4 Years",
+        "category": "electronics"
     },{
         "skill": "Soldering",
-        "experience": "7 Years"
+        "experience": "7 Years",
+        "category": "electronics"
     },{
         "skill": "Function Generators & Power Supplies",
-        "experience": "4 Years"
-    }
-    ],
-
-    "equipment": [
-    {
+        "experience": "4 Years",
+        "category": "electronics"
+    },{
         "skill": "Milling",
-        "experience": "6 Years"
+        "experience": "6 Years",
+        "category": "equipment"
     },{
         "skill": "Lathes",
-        "experience": "6 Years"
+        "experience": "6 Years",
+        "category": "equipment"
     },{
-        "skill": "3D Printers",
-        "experience": "4 Years"
+        "skill": "HTML/CSS/JS",
+        "experience": "Enough to Make This Website",
+        "category": "programming"
+    },{
+        "skill": "C#",
+        "experience": "Made Unity Game",
+        "category": "programming"
     }
     ]
 

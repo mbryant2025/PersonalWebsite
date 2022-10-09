@@ -1,5 +1,8 @@
 window.onload=function(){
 
+    var allButton = document.getElementById("allButton");
+    allButton.addEventListener("click", showAll);
+
     var progBtn = document.getElementById("programmingButton");
     progBtn.addEventListener("click", showProgramming);
 
@@ -9,12 +12,33 @@ window.onload=function(){
     var equipmentBtn = document.getElementById("equipmentButton");
     equipmentBtn.addEventListener("click", showEquipment);
 
-    showProgramming();
+    showAll();
+
+}
+
+function showAll() {
+
+    document.getElementById("allButton").classList.add('activatedButton');
+    document.getElementById("allButton").classList.remove('neutralButton');
+
+    document.getElementById("programmingButton").classList.add('neutralButton');
+    document.getElementById("programmingButton").classList.remove('activatedButton');
+
+    document.getElementById("electronicsButton").classList.add('neutralButton');
+    document.getElementById("electronicsButton").classList.remove('activatedButton');
+
+    document.getElementById("equipmentButton").classList.add('neutralButton');
+    document.getElementById("equipmentButton").classList.remove('activatedButton');
+
+    loadAll();
 
 }
 
 
 function showProgramming() {
+
+    document.getElementById("allButton").classList.add('neutralButton');
+    document.getElementById("allButton").classList.remove('activatedButton');
     
     document.getElementById("programmingButton").classList.add('activatedButton');
     document.getElementById("programmingButton").classList.remove('neutralButton');
@@ -30,6 +54,9 @@ function showProgramming() {
 
 function showElectronics() {
 
+    document.getElementById("allButton").classList.add('neutralButton');
+    document.getElementById("allButton").classList.remove('activatedButton');
+
     document.getElementById("programmingButton").classList.add('neutralButton');
     document.getElementById("programmingButton").classList.remove('activatedButton');
 
@@ -43,6 +70,9 @@ function showElectronics() {
 }
 
 function showEquipment() {
+
+    document.getElementById("allButton").classList.add('neutralButton');
+    document.getElementById("allButton").classList.remove('activatedButton');
 
     document.getElementById("programmingButton").classList.add('neutralButton');
     document.getElementById("programmingButton").classList.remove('activatedButton');
@@ -68,6 +98,36 @@ function readTextFile(file, callback) {
     rawFile.send(null);
 }
 
+function loadAll() {
+
+    var table = document.getElementById("table");
+
+    for (let i = table.rows.length - 1; i > 0; i--) {
+        table.deleteRow(i);
+    }
+
+    readTextFile("skills.json", function(text){
+        var data = JSON.parse(text);
+        var allSkills = data.skills;
+
+        for (let i = 0; i < allSkills.length; i++) {
+
+            let row = table.insertRow(i+1);
+
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+
+            let skill = allSkills[i].skill;
+            let experience = allSkills[i].experience;
+
+            cell1.innerHTML = skill;
+            cell2.innerHTML = experience;
+
+
+        }
+    });
+
+}
 
 function loadProgramming() {
     
@@ -79,20 +139,27 @@ function loadProgramming() {
 
     readTextFile("skills.json", function(text){
         var data = JSON.parse(text);
-        var programming = data.programming;
+        var allSkills = data.skills;
 
-        for (let i = 0; i < programming.length; i++) {
-            let row = table.insertRow(i+1);
+        let addedRows = 0;
 
-            let cell1 = row.insertCell(0);
-            let cell2 = row.insertCell(1);
+        for (let i = 0; i < allSkills.length; i++) {
 
-            let skill = programming[i].skill;
-            let experience = programming[i].experience;
+            if(allSkills[i].category == "programming") {
 
+                let row = table.insertRow(addedRows+1);
 
-            cell1.innerHTML = skill;
-            cell2.innerHTML = experience;
+                let cell1 = row.insertCell(0);
+                let cell2 = row.insertCell(1);
+
+                let skill = allSkills[i].skill;
+                let experience = allSkills[i].experience;
+
+                cell1.innerHTML = skill;
+                cell2.innerHTML = experience;
+
+                addedRows++;
+            }
 
         }
     });
@@ -109,20 +176,27 @@ function loadElectronics() {
 
     readTextFile("skills.json", function(text){
         var data = JSON.parse(text);
-        var electronics = data.electronics;
+        var allSkills = data.skills;
 
-        for (let i = 0; i < electronics.length; i++) {
-            let row = table.insertRow(i+1);
+        let addedRows = 0;
 
-            let cell1 = row.insertCell(0);
-            let cell2 = row.insertCell(1);
+        for (let i = 0; i < allSkills.length; i++) {
 
-            let skill = electronics[i].skill;
-            let experience = electronics[i].experience;
+            if(allSkills[i].category == "electronics") {
 
+                let row = table.insertRow(addedRows+1);
 
-            cell1.innerHTML = skill;
-            cell2.innerHTML = experience;
+                let cell1 = row.insertCell(0);
+                let cell2 = row.insertCell(1);
+
+                let skill = allSkills[i].skill;
+                let experience = allSkills[i].experience;
+
+                cell1.innerHTML = skill;
+                cell2.innerHTML = experience;
+
+                addedRows++;
+            }
 
         }
     });
@@ -140,23 +214,29 @@ function loadEquipment() {
 
     readTextFile("skills.json", function(text){
         var data = JSON.parse(text);
-        var equipment = data.equipment;
+        var allSkills = data.skills;
 
-        for (let i = 0; i < equipment.length; i++) {
-            let row = table.insertRow(i+1);
+        let addedRows = 0;
 
-            let cell1 = row.insertCell(0);
-            let cell2 = row.insertCell(1);
+        for (let i = 0; i < allSkills.length; i++) {
 
-            let skill = equipment[i].skill;
-            let experience = equipment[i].experience;
+            if(allSkills[i].category == "equipment") {
 
-            cell1.innerHTML = skill;
-            cell2.innerHTML = experience;
+                let row = table.insertRow(addedRows+1);
 
-            
+                let cell1 = row.insertCell(0);
+                let cell2 = row.insertCell(1);
+
+                let skill = allSkills[i].skill;
+                let experience = allSkills[i].experience;
+
+                cell1.innerHTML = skill;
+                cell2.innerHTML = experience;
+
+                addedRows++;
+            }
+
         }
     });
-
-        
+      
 }
