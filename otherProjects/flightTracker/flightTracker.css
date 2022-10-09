@@ -1,0 +1,70 @@
+body {
+    background-color: black;
+    margin-bottom: 50px;
+  }
+
+.activatedButton {
+    background-color: #32a852;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family:'Courier New', monospace;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: 0.2s;
+    border-radius: 7px;
+    width: 85%;
+    margin-top: 70px;
+  }
+
+  .neutralButton {
+    background-color: #ccc;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family:'Courier New', monospace;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: 0.2s;
+    border-radius: 7px;
+    width: 85%;
+  }
+
+  .neutralButton:hover {
+    background-color: #32a852;
+    color: white;
+  }
+
+  .activatedButton:hover {
+    background-color: #36d661;
+    color: white;
+  }
+
+  #buttonWrapper {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.buttonSpacer {
+    display: flex;
+    justify-content: center;
+}
+
+.screenshot{
+    border: white 2px solid;
+}
+
+#cooledSystem {
+    max-width: 30%;
+}
+

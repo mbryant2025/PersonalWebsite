@@ -5,37 +5,141 @@
         <link href="flightTracker.css" rel="stylesheet" type="text/css" />
         <link href="../../mainLayout.css" rel="stylesheet" type="text/css" />
         
+        
 
-        <title>Flight Tracker</title>
+        <title>About Me</title>
 
     </head>
     <body>
 
-        <a href="../other.html" class="backButton">&lt;</a>
+        <a href="../index.html" class="backButton">&lt;</a>
 
         <div class="writeupWrapper">
-            
+
             <div class="titleWrapper">
                 <div>
                     <a href="../other.html" class="backButton">&lt;</a>
                 </div>
                 <h1>Flight Tracker</h1>
-                <div></div>
+                <div>
+                </div>
             </div>
-
-            <h5>May 2022 - July 2022</h5>
+        
+            <h5>June 2022 - August 2022</h5>
     
-            <div class="infobox">
+            <div class="infoboxFull" id="article">
+
+                <div class="githubIconWrapper">
+                    <div></div>
+                    <div>
+                        <h5 class="firstHeading">Overview</h5>
+                    </div>
+                    <div>
+                        <a href="https://github.com/mbryant2025/mbryant2025.github.io/tree/master/aircraft"><img class="githubIcon" src="../../img/github.png" alt="GitHub Icon"></a>
+                    </div>
+                </div>
+
+                <p class="projectWriteup" alt="Project Image">
+                    Flight Tracker is a web application that allows users to track flights in real time. It is built using a ground plane antenna, an SDR, and a Raspberry Pi. 
+                    Data is decoded using Dump1090 and is displayed on a custom web page hosted by the Pi. 
+                </p>
+
+                <img src="./img/Screen Shot 2022-06-05 at 12.36.40 PM cropped.png" class="writeupImage screenshot">
+
+                <div id="buttonWrapper">
+                    <div>
+                    </div>
+                    <div>
+                        <div class="buttonSpacer">
+                            <a href="../../aircraft-static/static-aircraft.html" class="activatedButton">Launch Tracker</a>
+                        </div>
+                    </div>
+                    <div>
+                    </div>
+                </div>
+
+                <p class="imageDescription">Note: the server is not currently running and the tracker page is static.</p>
+
+                <h5 class="secondHeading">Build Process</h5>
+
+                <p class="projectWriteup">
+                    This project started with the antenna. I decided to build a ground plane antenna that would be able to receive 1090 MHz ADS-B signals from overhead aircraft.
+                    The antenna is made from a flattened copper pipe and 1/4 wavelength coax center conductors.
+                </p>
+
+                <img src="./img/IMG_7826.JPG" class="writeupImage">
+                
+                <p class="imageDescription">Antenna construction</p>
+
+                <img src="./img/IMG_8446.JPG" class="writeupImage">
+
+                <p class="imageDescription">Completed antenna. An F connector was used to easily interface with the ground plane, radiating element, and coax cable.</p>
+
+                <p class="projectWriteup">
+                    Next came interfacing with the antenna through software. I used a Raspberry Pi 3B and an RTL-SDR dongle to digitize the signals.
+                    I configured Dump1090 to work on the Pi and made a backend Python script to read from Dump1090 and generate HTML using Pydeck.
+                    This HTML and the raw JSON is then served using NGINX through port forwarding. The final rendering takes the form of an iframe on the web interface. The entire software stack runs from boot on the Pi.
+                </p>
+
+                <p class="projectWriteup">
+                    The interface gets updates approximately every five seconds and they are reflected seamlessly and interactively on the web page.
+                    The backend also keeps track of various all-time records such as the highest altitude and the greatest speed.
+                </p>
+
+                <img src="./img/Screen Shot 2022-10-08 at 10.19.02 PM.png" class="writeupImage screenshot">
+
+                <p class="imageDescription">Current interface</p>
+
+                <img src="./img/Screen Shot 2022-06-05 at 12.37.12 PM.png" class="writeupImage screenshot">
+
+                <p class="imageDescription">Displayed list of detected planes</p>
+
+                <p class="projectWriteup">
+                    I then tested the entire system by going oustide and holding the antenna over my head (confusing my neighbors in the process).
+                    I was able to see aircraft both overhead and on the web page. I decided I would make a more permanent setup.
+                </p>
+
+                <img src="./img/IMG_7843.JPG" class="writeupImage">
+
+                <p class="imageDescription">3D printing custom antenna mount</p>
+
+                <img src="./img/IMG_7844.JPG" class="writeupImage">
+
+                <p class="imageDescription">Tower to mount antenna in attic. Electrical box at bottom houses the SDR and serves as a heatsink and for inteference protection.</p>
+
+                <img src="./img/IMG_7847.JPG" class="writeupImage">
+
+                <p class="imageDescription">Tower positions antenna at top of attic</p>
+
+                <img src="./img/IMG_8430.JPG" class="writeupImage">
+
+                <p class="imageDescription">Top of attic = heat = bad for 3D print</p>
+
+                <img src="./img/IMG_8450.JPG" class="writeupImage">
+
+                <p class="imageDescription">... = thicker mount and 100% infill</p>
+
+                <p class="projectWriteup">
+                    With the deformation of the 3D print, I began to get concerned about the thermal performance of the Pi and SDR. 
+                    I mounted the Pi in a fan case and proceeded to mount a CPU cooler to the SDR.
+                </p>
+
+                <img src="./img/IMG_8437.JPG" class="writeupImage">
+
+                <p class="imageDescription">Some of the heat-conducting material in the electrical box. Thermal paste was also used.</p>
+
+                <img src="./img/IMG_8440.JPG" class="writeupImage">
+
+                <p class="imageDescription">CPU cooler mounted to box. Totally overkill and I'm all for it.</p>
+
+                <img src="./img/IMG_8453.JPG" class="writeupImage" id="cooledSystem">
+
+                <p class="imageDescription">Fully cooled system. The Pi can be seen towards the bottom of the image.</p>
 
 
-                <p class="projectWriteup">Coming soon...</p>
-
-    
             </div>
 
         </div>
 
-        
-        
     </body>
 </html>
