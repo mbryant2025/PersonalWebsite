@@ -3,3 +3,7 @@ favicon
 
 supermemebros sometimes progress bar doesn't show
 supermemebros dynamic back button placement
+
+supermemebros leaderboard
+
+interactive tic tac toe ai and hundred cities -- redo in JS
