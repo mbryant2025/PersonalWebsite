@@ -69,8 +69,7 @@
         "skill": "Java",
         "experience": "3 Years",
         "category": "programming"
-    },
-    {
+    },{
         "skill": "LTspice",
         "experience": "2 Years",
         "category": "electronics"
@@ -104,11 +103,11 @@
         "category": "equipment"
     },{
         "skill": "HTML/CSS/JS",
-        "experience": "Enough to Make This Website",
+        "experience": "1 Year",
         "category": "programming"
     },{
         "skill": "C#",
-        "experience": "Made Unity Game",
+        "experience": "1 Year",
         "category": "programming"
     }
     ]
