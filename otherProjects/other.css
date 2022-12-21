@@ -126,3 +126,10 @@
     margin-right: 0px;
     float: right;
 }
+
+#snake {
+    max-width:170px;
+    max-height:170px;
+    margin-top:10px;
+    float: right;
+}

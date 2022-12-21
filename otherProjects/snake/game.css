@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+canvas {
+  padding: 0;
+  margin: auto;
+  display: block;
+  width: 800px;
+  height: 600px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #eee;
+  hyphens: manual;
+}
+
+.score {
+  bottom: 50;
+  padding: 10px;
+  font-size: 35px;
+  color: #fff;
+  font-family:'Courier New', Courier, monospace;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.gameTitleWrapper {
+  display: grid;
+  grid-template-columns: 25% 10% 65%;
+}
+
